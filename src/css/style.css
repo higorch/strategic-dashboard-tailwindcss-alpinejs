@@ -534,6 +534,10 @@ video {
   position: sticky;
 }
 
+.bottom-0 {
+  bottom: 0px;
+}
+
 .top-0 {
   top: 0px;
 }
@@ -570,10 +574,6 @@ video {
   height: 100vh;
 }
 
-.h-side-body {
-  height: calc(100vh - 160px);
-}
-
 .h-side-footer {
   height: 70px;
 }
@@ -584,6 +584,10 @@ video {
 
 .min-h-content-body {
   min-height: calc(100vh - 120px);
+}
+
+.min-h-side-body {
+  min-height: calc(100vh - 160px);
 }
 
 .w-\[30px\] {

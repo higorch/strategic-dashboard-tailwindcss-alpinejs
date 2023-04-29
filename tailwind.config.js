@@ -9,11 +9,11 @@ module.exports = {
       height: {
         "side-header": "90px",
         "side-footer": "70px",
-        "side-body": "calc(100vh - 160px)",
         "content-header": "70px",
         "content-footer": "50px",
       },
       minHeight: {
+        "side-body": "calc(100vh - 160px)",
         "content-body": "calc(100vh - 120px)",
       },
       colors: {

@@ -16,13 +16,13 @@
 
     <div class="flex relative">
 
-        <div class="fixed w-side h-screen border-r-[1px] border-theme-gray-secondary">
+        <div class="fixed w-side h-screen overflow-y-auto border-r-[1px] border-theme-gray-secondary">
 
-            <div class="flex justify-start items-center w-full h-side-header px-[30px] bg-theme-gray-primary">
+            <div class="flex justify-start items-center w-full h-side-header sticky top-0 px-[30px] bg-theme-gray-primary">
                 <img src="./img/logoipsum.svg" class="w-auto h-[45px]">
             </div>
 
-            <nav class="w-full h-side-body overflow-y-auto bg-theme-gray-primary">
+            <nav class="w-full min-h-side-body bg-theme-gray-primary">
                 <ul class="flex flex-col">
                     <li>
                         <a href="#"
@@ -82,8 +82,7 @@
                 </ul>
             </nav>
 
-            <div
-                class="flex justify-start items-center gap-[15px] w-full h-side-footer px-[30px] bg-theme-gray-primary">
+            <div class="flex justify-start items-center sticky bottom-0 gap-[15px] w-full h-side-footer px-[30px] bg-theme-gray-primary">
 
                 <a href="#" title="Logout"
                     class="flex justify-center items-center w-[30px] h-[30px] text-[14px] rounded-full text-gray-700 bg-theme-gray-secondary">
