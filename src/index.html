@@ -14,15 +14,15 @@
 
 <body>
 
-    <div class="flex relative bg-[#f1f3f4]">
+    <div class="flex relative">
 
-        <div class="fixed w-[270px] h-screen border-r-[1px] border-[#d9dbdc]">
+        <div class="fixed w-side h-screen border-r-[1px] border-theme-gray-secondary">
 
-            <div class="flex justify-start items-center w-full h-header-side px-[30px] bg-[#f1f3f4]">
+            <div class="flex justify-start items-center w-full h-side-header px-[30px] bg-theme-gray-primary">
                 <img src="./img/logoipsum.svg" class="w-auto h-[45px]">
             </div>
 
-            <nav class="w-full h-menu-side overflow-y-auto">
+            <nav class="w-full h-side-body overflow-y-auto bg-theme-gray-primary">
                 <ul class="flex flex-col">
                     <li>
                         <a href="#"
@@ -82,77 +82,68 @@
                 </ul>
             </nav>
 
-            <div class="flex justify-start items-center gap-[15px] w-full h-footer-side px-[30px] bg-[#f1f3f4]">
-                
-                <a href="#" title="Logout" class="flex justify-center items-center w-[30px] h-[30px] text-[14px] rounded-full text-gray-700 bg-[#d9dbdc]">
+            <div
+                class="flex justify-start items-center gap-[15px] w-full h-side-footer px-[30px] bg-theme-gray-primary">
+
+                <a href="#" title="Logout"
+                    class="flex justify-center items-center w-[30px] h-[30px] text-[14px] rounded-full text-gray-700 bg-theme-gray-secondary">
                     <i class="fa-solid fa-right-from-bracket"></i>
                 </a>
-                
-                <a href="#" title="Settings" class="flex justify-center items-center w-[30px] h-[30px] text-[14px] rounded-full text-gray-700 bg-[#d9dbdc]">
+
+                <a href="#" title="Settings"
+                    class="flex justify-center items-center w-[30px] h-[30px] text-[14px] rounded-full text-gray-700 bg-theme-gray-secondary">
                     <i class="fa-solid fa-gear"></i>
                 </a>
-                
+
             </div>
 
         </div>
 
-        <div class="w-full min-h-screen ml-[270px] px-[30px]">
+        <div class="flex flex-col w-full ml-[270px]">
 
-            <p>
-                Sequi odit rem quis animi temporibus ratione repellat architecto, aperiam eius nesciunt debitis aliquam
-                similique esse vero quia commodi laborum libero, cupiditate adipisci. Perferendis soluta esse illo autem
-                possimus itaque? Eligendi sed est eum ad itaque temporibus, accusamus ex neque mollitia delectus minus
-                soluta distinctio labore dignissimos reiciendis. Labore qui eveniet fugiat veniam doloremque praesentium
-                atque numquam optio distinctio hic!
-            </p>
+            <div class="flex items-center w-full h-content-header sticky top-0 px-[30px] bg-theme-gray-primary">
+                header
+            </div>
 
-            <p>
-                Sequi odit rem quis animi temporibus ratione repellat architecto, aperiam eius nesciunt debitis aliquam
-                similique esse vero quia commodi laborum libero, cupiditate adipisci. Perferendis soluta esse illo autem
-                possimus itaque? Eligendi sed est eum ad itaque temporibus, accusamus ex neque mollitia delectus minus
-                soluta distinctio labore dignissimos reiciendis. Labore qui eveniet fugiat veniam doloremque praesentium
-                atque numquam optio distinctio hic!
-            </p>
+            <div class="w-full min-h-content-body px-[30px] bg-theme-gray-primary">
 
-            <p>
-                Sequi odit rem quis animi temporibus ratione repellat architecto, aperiam eius nesciunt debitis aliquam
-                similique esse vero quia commodi laborum libero, cupiditate adipisci. Perferendis soluta esse illo autem
-                possimus itaque? Eligendi sed est eum ad itaque temporibus, accusamus ex neque mollitia delectus minus
-                soluta distinctio labore dignissimos reiciendis. Labore qui eveniet fugiat veniam doloremque praesentium
-                atque numquam optio distinctio hic!
-            </p>
+                <p>
+                    Sequi odit rem quis animi temporibus ratione repellat architecto, aperiam eius nesciunt debitis
+                    aliquam similique esse vero quia commodi laborum libero, cupiditate adipisci. Perferendis
+                    soluta esse illo autem possimus itaque? Eligendi sed est eum ad itaque temporibus, accusamus ex
+                    neque mollitia delectus minus soluta distinctio labore dignissimos reiciendis. Labore qui eveniet
+                    fugiat veniam doloremque praesentium atque numquam optio distinctio hic!
+                </p>
 
-            <p>
-                Sequi odit rem quis animi temporibus ratione repellat architecto, aperiam eius nesciunt debitis aliquam
-                similique esse vero quia commodi laborum libero, cupiditate adipisci. Perferendis soluta esse illo autem
-                possimus itaque? Eligendi sed est eum ad itaque temporibus, accusamus ex neque mollitia delectus minus
-                soluta distinctio labore dignissimos reiciendis. Labore qui eveniet fugiat veniam doloremque praesentium
-                atque numquam optio distinctio hic!
-            </p>
+                <p>
+                    Sequi odit rem quis animi temporibus ratione repellat architecto, aperiam eius nesciunt debitis
+                    aliquam similique esse vero quia commodi laborum libero, cupiditate adipisci. Perferendis
+                    soluta esse illo autem possimus itaque? Eligendi sed est eum ad itaque temporibus, accusamus ex
+                    neque mollitia delectus minus soluta distinctio labore dignissimos reiciendis. Labore qui eveniet
+                    fugiat veniam doloremque praesentium atque numquam optio distinctio hic!
+                </p>
 
-            <p>
-                Sequi odit rem quis animi temporibus ratione repellat architecto, aperiam eius nesciunt debitis aliquam
-                similique esse vero quia commodi laborum libero, cupiditate adipisci. Perferendis soluta esse illo autem
-                possimus itaque? Eligendi sed est eum ad itaque temporibus, accusamus ex neque mollitia delectus minus
-                soluta distinctio labore dignissimos reiciendis. Labore qui eveniet fugiat veniam doloremque praesentium
-                atque numquam optio distinctio hic!
-            </p>
+                <p>
+                    Sequi odit rem quis animi temporibus ratione repellat architecto, aperiam eius nesciunt debitis
+                    aliquam similique esse vero quia commodi laborum libero, cupiditate adipisci. Perferendis
+                    soluta esse illo autem possimus itaque? Eligendi sed est eum ad itaque temporibus, accusamus ex
+                    neque mollitia delectus minus soluta distinctio labore dignissimos reiciendis. Labore qui eveniet
+                    fugiat veniam doloremque praesentium atque numquam optio distinctio hic!
+                </p>
 
-            <p>
-                Sequi odit rem quis animi temporibus ratione repellat architecto, aperiam eius nesciunt debitis aliquam
-                similique esse vero quia commodi laborum libero, cupiditate adipisci. Perferendis soluta esse illo autem
-                possimus itaque? Eligendi sed est eum ad itaque temporibus, accusamus ex neque mollitia delectus minus
-                soluta distinctio labore dignissimos reiciendis. Labore qui eveniet fugiat veniam doloremque praesentium
-                atque numquam optio distinctio hic!
-            </p>
+                <p>
+                    Sequi odit rem quis animi temporibus ratione repellat architecto, aperiam eius nesciunt debitis
+                    aliquam similique esse vero quia commodi laborum libero, cupiditate adipisci. Perferendis
+                    soluta esse illo autem possimus itaque? Eligendi sed est eum ad itaque temporibus, accusamus ex
+                    neque mollitia delectus minus soluta distinctio labore dignissimos reiciendis. Labore qui eveniet
+                    fugiat veniam doloremque praesentium atque numquam optio distinctio hic!
+                </p>
 
-            <p>
-                Sequi odit rem quis animi temporibus ratione repellat architecto, aperiam eius nesciunt debitis aliquam
-                similique esse vero quia commodi laborum libero, cupiditate adipisci. Perferendis soluta esse illo autem
-                possimus itaque? Eligendi sed est eum ad itaque temporibus, accusamus ex neque mollitia delectus minus
-                soluta distinctio labore dignissimos reiciendis. Labore qui eveniet fugiat veniam doloremque praesentium
-                atque numquam optio distinctio hic!
-            </p>
+            </div>
+
+            <div class="flex items-center w-full h-content-footer px-[30px] bg-theme-gray-primary">
+                footer
+            </div>
 
         </div>
 

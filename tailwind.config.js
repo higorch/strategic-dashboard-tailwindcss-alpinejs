@@ -3,10 +3,24 @@ module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
     extend: {
+      width: {
+        "side": "270px",
+      },
       height: {
-        "header-side": "90px",
-        "footer-side": "70px",
-        "menu-side": "calc(100vh - 160px)"
+        "side-header": "90px",
+        "side-footer": "70px",
+        "side-body": "calc(100vh - 160px)",
+        "content-header": "70px",
+        "content-footer": "50px",
+      },
+      minHeight: {
+        "content-body": "calc(100vh - 120px)",
+      },
+      colors: {
+        "theme-gray": {
+          "primary": "#f1f3f4",
+          "secondary": "#d9dbdc",
+        }
       }
     },
   },
