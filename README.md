@@ -1,1 +1,1 @@
-# strategic-dashboard-tailwindcss-alpinejs
+# Strategic Dashboard With TailwindCss & AlpineJs
