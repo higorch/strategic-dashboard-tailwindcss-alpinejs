@@ -16,9 +16,15 @@
 
     <div class="flex relative">
 
-        <div class="fixed w-side h-screen overflow-y-auto border-r-[1px] border-theme-gray-secondary">
+        <div x-data="{displaySide: true}" @open-side.window="displaySide = $event.detail"
+            class="fixed left-0 w-[270px] h-screen overflow-y-auto border-r-[1px] transition-all border-theme-gray-secondary"
+            :class="{ 
+                'left-0': displaySide,
+                'left-[-270px]': !displaySide,
+            }">
 
-            <div class="flex justify-start items-center w-full h-side-header sticky top-0 px-[30px] bg-theme-gray-primary">
+            <div
+                class="flex justify-start items-center w-full h-side-header sticky top-0 px-[30px] bg-theme-gray-primary">
                 <img src="./img/logoipsum.svg" class="w-auto h-[45px]">
             </div>
 
@@ -82,15 +88,16 @@
                 </ul>
             </nav>
 
-            <div class="flex justify-start items-center sticky bottom-0 gap-[15px] w-full h-side-footer px-[30px] bg-theme-gray-primary">
+            <div
+                class="flex justify-start items-center sticky bottom-0 gap-[15px] w-full h-side-footer px-[30px] bg-theme-gray-primary">
 
                 <a href="#" title="Logout"
-                    class="flex justify-center items-center w-[30px] h-[30px] text-[14px] rounded-full text-gray-700 bg-theme-gray-secondary">
+                    class="flex justify-center items-center w-[30px] h-[30px] text-[14px] rounded-full text-gray-500 bg-theme-gray-secondary">
                     <i class="fa-solid fa-right-from-bracket"></i>
                 </a>
 
                 <a href="#" title="Settings"
-                    class="flex justify-center items-center w-[30px] h-[30px] text-[14px] rounded-full text-gray-700 bg-theme-gray-secondary">
+                    class="flex justify-center items-center w-[30px] h-[30px] text-[14px] rounded-full text-gray-500 bg-theme-gray-secondary">
                     <i class="fa-solid fa-gear"></i>
                 </a>
 
@@ -98,10 +105,29 @@
 
         </div>
 
-        <div class="flex flex-col w-full ml-[270px]">
+        <div x-data="{displaySide: true}" @open-side.window="displaySide = $event.detail"
+            class="flex flex-col w-full ml-[270px] transition-all" :class="{ 
+                'ml-[270px]': displaySide,
+                'ml-0': !displaySide,
+            }">
 
-            <div class="flex items-center w-full h-content-header sticky top-0 px-[30px] bg-theme-gray-primary">
-                header
+            <div
+                class="flex justify-between items-center w-full h-content-header sticky top-0 px-[30px] bg-theme-gray-primary">
+
+                <div x-data="{openSide: true}">
+                    <span class="text-[23px] text-gray-500 cursor-pointer"
+                        @click="$dispatch('open-side', openSide = !openSide)">
+                        <i class="fa-solid" :class="{
+                            'fa-outdent': openSide,
+                            'fa-indent': !openSide
+                        }"></i>
+                    </span>
+                </div>
+
+                <div>profile</div>
+
+                <span class="absolute left-[30px] right-[30px] bottom-0 border-b-[1px] border-theme-gray-secondary"></span>
+
             </div>
 
             <div class="w-full min-h-content-body px-[30px] bg-theme-gray-primary">
@@ -140,8 +166,14 @@
 
             </div>
 
-            <div class="flex items-center w-full h-content-footer px-[30px] bg-theme-gray-primary">
-                footer
+            <div class="flex items-center w-full h-content-footer relative px-[30px] bg-theme-gray-primary">
+
+                <span class="absolute left-[30px] right-[30px] top-0 border-b-[1px] border-theme-gray-secondary"></span>
+
+                <span class="text-gray-500 text-sm">
+                    &copy; 2023 - Strategic Dashboard
+                </span>
+
             </div>
 
         </div>

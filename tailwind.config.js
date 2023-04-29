@@ -3,18 +3,15 @@ module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
     extend: {
-      width: {
-        "side": "270px",
-      },
       height: {
         "side-header": "90px",
         "side-footer": "70px",
-        "content-header": "70px",
+        "content-header": "60px",
         "content-footer": "50px",
       },
       minHeight: {
         "side-body": "calc(100vh - 160px)",
-        "content-body": "calc(100vh - 120px)",
+        "content-body": "calc(100vh - 110px)",
       },
       colors: {
         "theme-gray": {
