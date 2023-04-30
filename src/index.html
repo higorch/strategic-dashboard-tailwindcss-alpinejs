@@ -12,121 +12,113 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
-<body>
+<body x-data="{openSide: true}">
 
-    <div class="flex relative">
+    <div class="flex flex-row relative">
 
-        <div x-data="{displaySide: true}" @open-side.window="displaySide = $event.detail"
-            class="fixed left-0 w-[270px] h-screen overflow-y-auto border-r-[1px] transition-all border-theme-gray-secondary"
-            :class="{ 
-                'left-0': displaySide,
-                'left-[-270px]': !displaySide,
-            }">
+        <div class="fixed left-0 w-[270px] h-screen overflow-y-auto border-r-[1px] transition-all border-theme-gray-secondary" :class="{'left-0': openSide, 'left-[-270px]': !openSide}">
 
-            <div
-                class="flex justify-start items-center w-full h-side-header sticky top-0 px-[30px] bg-theme-gray-primary">
+            <div class="flex justify-start items-center w-full h-side-header sticky top-0 px-[30px] bg-theme-gray-primary">
                 <img src="./img/logoipsum.svg" class="w-auto h-[45px]">
             </div>
 
             <nav class="w-full min-h-side-body bg-theme-gray-primary">
-                <ul class="flex flex-col">
+                <ul class="flex flex-col gap-[30px]">
                     <li>
-                        <a href="#"
-                            class="flex items-center py-[15px] px-[30px] text-[16px] font-semibold text-gray-500">
-                            <i class="fa-solid fa-gauge-high mr-[15px]"></i>
+                        <a href="#" class="flex items-center px-[30px] text-[18px] font-semibold text-gray-500">
+                            <i class="fa-solid fa-gauge-high mr-[10px]"></i>
                             <span>Dashboard</span>
                         </a>
                     </li>
                     <li class="border-l-[5px] border-gray-900">
-                        <a href="#" class="flex items-center py-[15px] px-[30px] text-[16px] font-bold text-black">
-                            <i class="fa-solid fa-list-check mr-[15px]"></i>
+                        <a href="#" class="flex items-center px-[30px] text-[18px] font-bold text-black">
+                            <i class="fa-solid fa-list-check mr-[10px]"></i>
                             <span>Projects</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#"
-                            class="flex items-center py-[15px] px-[30px] text-[16px] font-semibold text-gray-500">
-                            <i class="fa-regular fa-address-card mr-[15px]"></i>
+                        <a href="#" class="flex items-center px-[30px] text-[18px] font-semibold text-gray-500">
+                            <i class="fa-regular fa-address-card mr-[10px]"></i>
                             <span>Accounts</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#"
-                            class="flex items-center py-[15px] px-[30px] text-[16px] font-semibold text-gray-500">
-                            <i class="fa-solid fa-users mr-[15px]"></i>
+                        <a href="#" class="flex items-center px-[30px] text-[18px] font-semibold text-gray-500">
+                            <i class="fa-solid fa-users mr-[10px]"></i>
                             <span>Users</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#"
-                            class="flex items-center py-[15px] px-[30px] text-[16px] font-semibold text-gray-500">
-                            <i class="fa-solid fa-diagram-project mr-[15px]"></i>
+                        <a href="#" class="flex items-center px-[30px] text-[18px] font-semibold text-gray-500">
+                            <i class="fa-solid fa-diagram-project mr-[10px]"></i>
                             <span>Diagram</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#"
-                            class="flex items-center py-[15px] px-[30px] text-[16px] font-semibold text-gray-500">
-                            <i class="fa-solid fa-rectangle-list mr-[15px]"></i>
+                        <a href="#" class="flex items-center px-[30px] text-[18px] font-semibold text-gray-500">
+                            <i class="fa-solid fa-rectangle-list mr-[10px]"></i>
                             <span>Kanban</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#"
-                            class="flex items-center py-[15px] px-[30px] text-[16px] font-semibold text-gray-500">
-                            <i class="fa-brands fa-uikit mr-[15px]"></i>
+                        <a href="#" class="flex items-center px-[30px] text-[18px] font-semibold text-gray-500">
+                            <i class="fa-brands fa-uikit mr-[10px]"></i>
                             <span>Components UI/UX</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#"
-                            class="flex items-center py-[15px] px-[30px] text-[16px] font-semibold text-gray-500">
-                            <i class="fa-solid fa-pager mr-[15px]"></i>
+                        <a href="#" class="flex items-center px-[30px] text-[18px] font-semibold text-gray-500">
+                            <i class="fa-solid fa-pager mr-[10px]"></i>
                             <span>Pages</span>
                         </a>
                     </li>
                 </ul>
             </nav>
 
-            <div
-                class="flex justify-start items-center sticky bottom-0 gap-[15px] w-full h-side-footer px-[30px] bg-theme-gray-primary">
-
-                <a href="#" title="Logout"
-                    class="flex justify-center items-center w-[30px] h-[30px] text-[14px] rounded-full text-gray-500 bg-theme-gray-secondary">
-                    <i class="fa-solid fa-right-from-bracket"></i>
-                </a>
-
-                <a href="#" title="Settings"
-                    class="flex justify-center items-center w-[30px] h-[30px] text-[14px] rounded-full text-gray-500 bg-theme-gray-secondary">
+            <div class="flex justify-between items-center sticky bottom-0 gap-[15px] w-full h-side-footer px-[30px] bg-theme-gray-primary">
+                <a href="#" title="Settings" class="flex justify-center items-center w-[40px] h-[40px] text-base rounded-full text-gray-500 bg-theme-gray-secondary">
                     <i class="fa-solid fa-gear"></i>
                 </a>
-
+                <a href="#" title="Logout" class="flex justify-center items-center w-[40px] h-[40px] text-base rounded-full text-gray-500 bg-theme-gray-secondary">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                </a>
             </div>
 
         </div>
 
-        <div x-data="{displaySide: true}" @open-side.window="displaySide = $event.detail"
-            class="flex flex-col w-full ml-[270px] transition-all" :class="{ 
-                'ml-[270px]': displaySide,
-                'ml-0': !displaySide,
-            }">
+        <div class="flex flex-col w-full ml-[270px] transition-all" :class="{'ml-[270px]': openSide, 'ml-0': !openSide}">
 
-            <div
-                class="flex justify-between items-center w-full h-content-header sticky top-0 px-[30px] bg-theme-gray-primary">
+            <div class="flex justify-between items-center w-full h-content-header sticky top-0 px-[30px] bg-theme-gray-primary">
 
-                <div x-data="{openSide: true}">
-                    <span class="text-[23px] text-gray-500 cursor-pointer"
-                        @click="$dispatch('open-side', openSide = !openSide)">
-                        <i class="fa-solid" :class="{
-                            'fa-outdent': openSide,
-                            'fa-indent': !openSide
-                        }"></i>
+                <div>
+                    <span class="text-[18px] text-gray-500 cursor-pointer" @click="openSide = !openSide">
+                        <i class="fa-solid" :class="{'fa-arrow-left': openSide, 'fa-bars': !openSide}"></i>
                     </span>
                 </div>
 
-                <div>profile</div>
+                <div class="flex flex-row">
+                    
+                    <div class="flex gap-[30px] mr-[60px]">
+                        <a href="#" class="text-[18px] text-gray-500">
+                            <i class="fa-solid fa-envelope"></i>
+                        </a>
+                        <a href="#" class="text-[18px] text-gray-500">
+                            <i class="fa-solid fa-bell"></i>
+                        </a>
+                    </div>
 
-                <span class="absolute left-[30px] right-[30px] bottom-0 border-b-[1px] border-theme-gray-secondary"></span>
+                    <div x-data="{open: false}" class="relative">
+                        <a href="#" @click.prevent="open = !open">Higor</a>    
+                        <div class="flex-col gap-[10px] w-[225px] absolute right-0 p-[15px] z-50 rounded-md shadow-md shadow-gray-300 bg-white" :class="{'flex': open, 'hidden': !open}">
+                            <a href="#" class="text-base text-gray-500">Profile</a>
+                            <a href="#" class="text-base text-gray-500">Change Password</a>
+                            <a href="#" class="text-base text-gray-500">Logout</a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <span class="absolute left-[30px] right-[30px] bottom-0 border-b-[1px] z-10 border-theme-gray-secondary"></span>
 
             </div>
 
@@ -170,9 +162,7 @@
 
                 <span class="absolute left-[30px] right-[30px] top-0 border-b-[1px] border-theme-gray-secondary"></span>
 
-                <span class="text-gray-500 text-sm">
-                    &copy; 2023 - Strategic Dashboard
-                </span>
+                <span class="text-gray-500 text-sm">&copy; 2023 - Strategic Dashboard</span>
 
             </div>
 
