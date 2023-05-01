@@ -6,9 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Strategic Dashboard</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css" />    
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
@@ -16,61 +15,78 @@
 
     <div class="flex flex-row relative">
 
-        <div class="fixed left-0 w-[270px] h-screen overflow-y-auto border-r-[1px] transition-all border-theme-gray-secondary" :class="{'left-0': openSide, 'left-[-270px]': !openSide}">
+        <div class="fixed left-0 flex flex-col w-[270px] h-screen border-r-[1px] transition-all border-theme-gray-secondary" :class="{'left-0': openSide, 'left-[-270px]': !openSide}">
 
             <div class="flex justify-start items-center w-full h-side-header sticky top-0 px-[30px] bg-theme-gray-primary">
-                <img src="./img/logoipsum.svg" class="w-auto h-[60px]">
+                <img src="./img/logoipsum.svg" class="w-full h-auto">
             </div>
 
-            <nav class="w-full min-h-side-body bg-theme-gray-primary">
-                <ul class="flex flex-col gap-[30px]">
+            <nav id="side-menu-body" class="flex min-h-side-body overflow-y-auto bg-theme-gray-primary">
+                <ul class="flex flex-col w-full">
                     <li>
-                        <a href="#" class="flex items-center px-[30px] text-[18px] font-semibold text-gray-500">
+                        <a href="#" class="flex items-center py-[10px] px-[30px] text-base font-semibold text-gray-500">
                             <i class="fa-solid fa-gauge-high mr-[10px]"></i>
                             <span>Dashboard</span>
                         </a>
                     </li>
                     <li class="border-l-[5px] border-gray-900">
-                        <a href="#" class="flex items-center px-[30px] text-[18px] font-bold text-black">
+                        <a href="#" class="flex items-center py-[10px] px-[30px] text-base font-bold text-black">
                             <i class="fa-solid fa-list-check mr-[10px]"></i>
                             <span>Projects</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="flex items-center px-[30px] text-[18px] font-semibold text-gray-500">
+                        <a href="#" class="flex items-center py-[10px] px-[30px] text-base font-semibold text-gray-500">
                             <i class="fa-regular fa-address-card mr-[10px]"></i>
                             <span>Accounts</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="flex items-center px-[30px] text-[18px] font-semibold text-gray-500">
+                        <a href="#" class="flex items-center py-[10px] px-[30px] text-base font-semibold text-gray-500">
                             <i class="fa-solid fa-users mr-[10px]"></i>
                             <span>Users</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="flex items-center px-[30px] text-[18px] font-semibold text-gray-500">
+                        <a href="#" class="flex items-center py-[10px] px-[30px] text-base font-semibold text-gray-500">
                             <i class="fa-solid fa-diagram-project mr-[10px]"></i>
                             <span>Diagram</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="flex items-center px-[30px] text-[18px] font-semibold text-gray-500">
+                        <a href="#" class="flex items-center py-[10px] px-[30px] text-base font-semibold text-gray-500">
                             <i class="fa-solid fa-rectangle-list mr-[10px]"></i>
                             <span>Kanban</span>
                         </a>
                     </li>
-                    <li>
-                        <a href="#" class="flex items-center px-[30px] text-[18px] font-semibold text-gray-500">
+                    <li x-data="{open: false}">
+                        <a href="#" class="flex items-center py-[10px] px-[30px] relative text-base font-semibold text-gray-500" @click.prevent="open = !open">
                             <i class="fa-brands fa-uikit mr-[10px]"></i>
-                            <span>Components UI/UX</span>
+                            <span>Components Kit</span>
+                            <i class="fa-solid fa-angle-down absolute right-[30px] text-[12px]" :class="{'fa-angle-up': open, 'fa-angle-down': !open}"></i>
                         </a>
+                        <ul class="hidden flex-col" :class="{'flex': open, 'hidden': !open}">
+                            <li><a href="#" class="flex items-center py-[5px] pl-[60px] pr-[30px] text-base font-normal text-gray-500">Modal</a></li>
+                            <li><a href="#" class="flex items-center py-[5px] pl-[60px] pr-[30px] text-base font-normal text-gray-500">Tab</a></li>
+                            <li><a href="#" class="flex items-center py-[5px] pl-[60px] pr-[30px] text-base font-normal text-gray-500">Accordion</a></li>
+                            <li><a href="#" class="flex items-center py-[5px] pl-[60px] pr-[30px] text-base font-normal text-gray-500">Alert</a></li>
+                            <li><a href="#" class="flex items-center py-[5px] pl-[60px] pr-[30px] text-base font-normal text-gray-500">Table</a></li>
+                            <li><a href="#" class="flex items-center py-[5px] pl-[60px] pr-[30px] text-base font-normal text-gray-500">Card</a></li>
+                            <li><a href="#" class="flex items-center py-[5px] pl-[60px] pr-[30px] text-base font-normal text-gray-500">Form</a></li>
+                        </ul>
                     </li>
-                    <li>
-                        <a href="#" class="flex items-center px-[30px] text-[18px] font-semibold text-gray-500">
+                    <li x-data="{open: false}">
+                        <a href="#" class="flex items-center py-[10px] px-[30px] relative text-base font-semibold text-gray-500" @click.prevent="open = !open">
                             <i class="fa-solid fa-pager mr-[10px]"></i>
                             <span>Pages</span>
+                            <i class="fa-solid fa-angle-down absolute right-[30px] text-[12px]" :class="{'fa-angle-up': open, 'fa-angle-down': !open}"></i>
                         </a>
+                        <ul class="hidden flex-col" :class="{'flex': open, 'hidden': !open}">
+                            <li><a href="#" class="flex items-center py-[5px] pl-[60px] pr-[30px] text-base font-normal text-gray-500">Login</a></li>
+                            <li><a href="#" class="flex items-center py-[5px] pl-[60px] pr-[30px] text-base font-normal text-gray-500">Register</a></li>
+                            <li><a href="#" class="flex items-center py-[5px] pl-[60px] pr-[30px] text-base font-normal text-gray-500">Error 404</a></li>
+                            <li><a href="#" class="flex items-center py-[5px] pl-[60px] pr-[30px] text-base font-normal text-gray-500">Error 500</a></li>
+                        </ul>
                     </li>
                 </ul>
             </nav>
@@ -113,16 +129,16 @@
                         <a href="#" class="block relative w-[45px] h-[45px] rounded-full overflow-hidden" @click.prevent="open = !open">
                             <img src="./img/adam-wathan.jpg" alt="Adam Wathan" class="absolute top-0 right-0 bottom-0 left-0">
                         </a>    
-                        <div class="flex-col gap-[10px] w-[225px] absolute right-0 p-[15px] z-50 rounded-md shadow-md shadow-gray-300 bg-white hidden" :class="{'flex': open, 'hidden': !open}">
+                        <div class="flex-col gap-[10px] w-[225px] absolute top-full right-0 p-[15px] z-50 rounded-md shadow-md shadow-gray-300 bg-white hidden" :class="{'flex': open, 'hidden': !open}">
                             <div class="flex flex-col">
-                                <span class="font-semibold text-[14px] text-black">Adam Wathan</span>
+                                <span class="font-bold text-base text-black">Adam Wathan</span>
                                 <small class="text-[12px] text-gray-400">@adamwathan</small>
                             </div>
                             <hr class="border-theme-gray-primary">
-                            <a href="#" class="font-semibold text-[14px] text-gray-500">My Profile</a>
-                            <a href="#" class="font-semibold text-[14px] text-gray-500">Change Password</a>
+                            <a href="#" class="font-normal text-base text-gray-500">My Profile</a>
+                            <a href="#" class="font-normal text-base text-gray-500">Change Password</a>
                             <hr class="border-theme-gray-primary">
-                            <a href="#" class="font-semibold text-[14px] text-gray-500">
+                            <a href="#" class="font-normal text-base text-gray-500">
                                 <i class="fa-solid fa-right-from-bracket"></i>
                                 Logout
                             </a>
@@ -183,7 +199,11 @@
 
     </div>
 
+    <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.12.0/dist/cdn.min.js"></script>
+    <script>
+        new SimpleBar(document.getElementById('side-menu-body'));
+    </script>
 </body>
 
 </html>

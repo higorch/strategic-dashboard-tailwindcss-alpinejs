@@ -4,14 +4,14 @@ module.exports = {
   theme: {
     extend: {
       height: {
-        "side-header": "110px",
-        "side-footer": "70px",
+        "side-header": "100px",
+        "side-footer": "75px",
         "content-header": "70px",
-        "content-footer": "50px",
+        "content-footer": "75px",
       },
       minHeight: {
-        "side-body": "calc(100vh - 180px)",
-        "content-body": "calc(100vh - 120px)",
+        "side-body": "calc(100vh - 175px)",
+        "content-body": "calc(100vh - 145px)",
       },
       colors: {
         "theme-gray": {
