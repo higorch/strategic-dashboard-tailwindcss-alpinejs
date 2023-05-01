@@ -558,12 +558,20 @@ video {
   right: 0px;
 }
 
+.right-\[-3px\] {
+  right: -3px;
+}
+
 .right-\[30px\] {
   right: 30px;
 }
 
 .top-0 {
   top: 0px;
+}
+
+.top-\[3px\] {
+  top: 3px;
 }
 
 .z-10 {
@@ -586,8 +594,12 @@ video {
   margin-right: 10px;
 }
 
-.mr-\[60px\] {
-  margin-right: 60px;
+.mr-\[30px\] {
+  margin-right: 30px;
+}
+
+.block {
+  display: block;
 }
 
 .flex {
@@ -606,12 +618,20 @@ video {
   height: 45px;
 }
 
+.h-\[60px\] {
+  height: 60px;
+}
+
+.h-\[8px\] {
+  height: 8px;
+}
+
 .h-content-footer {
   height: 50px;
 }
 
 .h-content-header {
-  height: 60px;
+  height: 70px;
 }
 
 .h-screen {
@@ -623,15 +643,15 @@ video {
 }
 
 .h-side-header {
-  height: 90px;
+  height: 110px;
 }
 
 .min-h-content-body {
-  min-height: calc(100vh - 110px);
+  min-height: calc(100vh - 120px);
 }
 
 .min-h-side-body {
-  min-height: calc(100vh - 160px);
+  min-height: calc(100vh - 180px);
 }
 
 .w-\[225px\] {
@@ -644,6 +664,14 @@ video {
 
 .w-\[40px\] {
   width: 40px;
+}
+
+.w-\[45px\] {
+  width: 45px;
+}
+
+.w-\[8px\] {
+  width: 8px;
 }
 
 .w-auto {
@@ -690,8 +718,16 @@ video {
   gap: 15px;
 }
 
+.gap-\[20px\] {
+  gap: 20px;
+}
+
 .gap-\[30px\] {
   gap: 30px;
+}
+
+.overflow-hidden {
+  overflow: hidden;
 }
 
 .overflow-y-auto {
@@ -723,9 +759,19 @@ video {
   border-color: rgb(17 24 39 / var(--tw-border-opacity));
 }
 
+.border-theme-gray-primary {
+  --tw-border-opacity: 1;
+  border-color: rgb(241 243 244 / var(--tw-border-opacity));
+}
+
 .border-theme-gray-secondary {
   --tw-border-opacity: 1;
   border-color: rgb(217 219 220 / var(--tw-border-opacity));
+}
+
+.bg-red-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(220 38 38 / var(--tw-bg-opacity));
 }
 
 .bg-theme-gray-primary {
@@ -752,13 +798,16 @@ video {
   padding-right: 30px;
 }
 
-.text-\[18px\] {
-  font-size: 18px;
+.text-\[12px\] {
+  font-size: 12px;
 }
 
-.text-base {
-  font-size: 1rem;
-  line-height: 1.5rem;
+.text-\[14px\] {
+  font-size: 14px;
+}
+
+.text-\[18px\] {
+  font-size: 18px;
 }
 
 .text-sm {
@@ -777,6 +826,11 @@ video {
 .text-black {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
+.text-gray-400 {
+  --tw-text-opacity: 1;
+  color: rgb(156 163 175 / var(--tw-text-opacity));
 }
 
 .text-gray-500 {

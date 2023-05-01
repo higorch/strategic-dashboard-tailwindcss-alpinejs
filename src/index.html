@@ -19,7 +19,7 @@
         <div class="fixed left-0 w-[270px] h-screen overflow-y-auto border-r-[1px] transition-all border-theme-gray-secondary" :class="{'left-0': openSide, 'left-[-270px]': !openSide}">
 
             <div class="flex justify-start items-center w-full h-side-header sticky top-0 px-[30px] bg-theme-gray-primary">
-                <img src="./img/logoipsum.svg" class="w-auto h-[45px]">
+                <img src="./img/logoipsum.svg" class="w-auto h-[60px]">
             </div>
 
             <nav class="w-full min-h-side-body bg-theme-gray-primary">
@@ -76,10 +76,10 @@
             </nav>
 
             <div class="flex justify-between items-center sticky bottom-0 gap-[15px] w-full h-side-footer px-[30px] bg-theme-gray-primary">
-                <a href="#" title="Settings" class="flex justify-center items-center w-[40px] h-[40px] text-base rounded-full text-gray-500 bg-theme-gray-secondary">
+                <a href="#" title="Settings" class="flex justify-center items-center w-[40px] h-[40px] text-[18px] rounded-full text-gray-500 bg-theme-gray-secondary">
                     <i class="fa-solid fa-gear"></i>
                 </a>
-                <a href="#" title="Logout" class="flex justify-center items-center w-[40px] h-[40px] text-base rounded-full text-gray-500 bg-theme-gray-secondary">
+                <a href="#" title="Logout" class="flex justify-center items-center w-[40px] h-[40px] text-[18px] rounded-full text-gray-500 bg-theme-gray-secondary">
                     <i class="fa-solid fa-right-from-bracket"></i>
                 </a>
             </div>
@@ -96,23 +96,36 @@
                     </span>
                 </div>
 
-                <div class="flex flex-row">
+                <div class="flex flex-row justify-between items-center">
                     
-                    <div class="flex gap-[30px] mr-[60px]">
-                        <a href="#" class="text-[18px] text-gray-500">
+                    <div class="flex gap-[20px] mr-[30px]">
+                        <a href="#" class="relative text-[18px] text-gray-500">
+                            <span class="absolute right-[-3px] top-[3px] w-[8px] h-[8px] rounded-full bg-red-600"></span>
                             <i class="fa-solid fa-envelope"></i>
                         </a>
-                        <a href="#" class="text-[18px] text-gray-500">
+                        <a href="#" class="relative text-[18px] text-gray-500">
+                            <span class="absolute right-[-3px] top-[3px] w-[8px] h-[8px] rounded-full bg-red-600"></span>
                             <i class="fa-solid fa-bell"></i>
                         </a>
                     </div>
 
-                    <div x-data="{open: false}" class="relative">
-                        <a href="#" @click.prevent="open = !open">Higor</a>    
-                        <div class="flex-col gap-[10px] w-[225px] absolute right-0 p-[15px] z-50 rounded-md shadow-md shadow-gray-300 bg-white" :class="{'flex': open, 'hidden': !open}">
-                            <a href="#" class="text-base text-gray-500">Profile</a>
-                            <a href="#" class="text-base text-gray-500">Change Password</a>
-                            <a href="#" class="text-base text-gray-500">Logout</a>
+                    <div x-data="{open: false}" class="relative" @click.outside="open = false">
+                        <a href="#" class="block relative w-[45px] h-[45px] rounded-full overflow-hidden" @click.prevent="open = !open">
+                            <img src="./img/adam-wathan.jpg" alt="Adam Wathan" class="absolute top-0 right-0 bottom-0 left-0">
+                        </a>    
+                        <div class="flex-col gap-[10px] w-[225px] absolute right-0 p-[15px] z-50 rounded-md shadow-md shadow-gray-300 bg-white hidden" :class="{'flex': open, 'hidden': !open}">
+                            <div class="flex flex-col">
+                                <span class="font-semibold text-[14px] text-black">Adam Wathan</span>
+                                <small class="text-[12px] text-gray-400">@adamwathan</small>
+                            </div>
+                            <hr class="border-theme-gray-primary">
+                            <a href="#" class="font-semibold text-[14px] text-gray-500">My Profile</a>
+                            <a href="#" class="font-semibold text-[14px] text-gray-500">Change Password</a>
+                            <hr class="border-theme-gray-primary">
+                            <a href="#" class="font-semibold text-[14px] text-gray-500">
+                                <i class="fa-solid fa-right-from-bracket"></i>
+                                Logout
+                            </a>
                         </div>
                     </div>
 
