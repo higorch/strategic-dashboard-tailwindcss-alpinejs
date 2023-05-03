@@ -6,8 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Strategic Dashboard</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css" />    
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
@@ -21,7 +19,7 @@
                 <img src="./img/logoipsum.svg" class="w-full h-auto">
             </div>
 
-            <nav id="side-menu-body" class="flex min-h-side-body overflow-y-auto bg-theme-gray-primary">
+            <nav data-simplebar class="flex min-h-side-body overflow-y-auto bg-theme-gray-primary">
                 <ul class="flex flex-col w-full">
                     <li>
                         <a href="#" class="flex items-center py-[10px] px-[30px] text-base font-semibold text-gray-500">
@@ -199,11 +197,7 @@
 
     </div>
 
-    <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.12.0/dist/cdn.min.js"></script>
-    <script>
-        new SimpleBar(document.getElementById('side-menu-body'));
-    </script>
+    <script src="./bundle/bundle.js"></script>
 </body>
 
 </html>
