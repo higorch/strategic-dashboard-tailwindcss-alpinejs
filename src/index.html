@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Strategic Dashboard</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body x-data="{openSide: true}">
@@ -16,7 +16,7 @@
         <div class="fixed left-0 flex flex-col w-[270px] h-screen border-r-[1px] transition-all border-theme-gray-secondary" :class="{'left-0': openSide, 'left-[-270px]': !openSide}">
 
             <div class="flex justify-start items-center w-full h-side-header sticky top-0 px-[30px] bg-theme-gray-primary">
-                <img src="./img/logoipsum.svg" class="w-full h-auto">
+                <img src="./assets/img/logoipsum.svg" class="w-full h-auto">
             </div>
 
             <nav data-simplebar class="flex min-h-side-body overflow-y-auto bg-theme-gray-primary">
@@ -125,7 +125,7 @@
 
                     <div x-data="{open: false}" class="relative" @click.outside="open = false">
                         <a href="#" class="block relative w-[45px] h-[45px] rounded-full overflow-hidden" @click.prevent="open = !open">
-                            <img src="./img/adam-wathan.jpg" alt="Adam Wathan" class="absolute top-0 right-0 bottom-0 left-0">
+                            <img src="./assets/img/adam-wathan.jpg" alt="Adam Wathan" class="absolute top-0 right-0 bottom-0 left-0">
                         </a>    
                         <div class="flex-col gap-[10px] w-[225px] absolute top-full right-0 p-[15px] z-50 rounded-md shadow-md shadow-gray-300 bg-white hidden" :class="{'flex': open, 'hidden': !open}">
                             <div class="flex flex-col">
@@ -151,37 +151,7 @@
 
             <div class="w-full min-h-content-body px-[30px] bg-theme-gray-primary">
 
-                <p>
-                    Sequi odit rem quis animi temporibus ratione repellat architecto, aperiam eius nesciunt debitis
-                    aliquam similique esse vero quia commodi laborum libero, cupiditate adipisci. Perferendis
-                    soluta esse illo autem possimus itaque? Eligendi sed est eum ad itaque temporibus, accusamus ex
-                    neque mollitia delectus minus soluta distinctio labore dignissimos reiciendis. Labore qui eveniet
-                    fugiat veniam doloremque praesentium atque numquam optio distinctio hic!
-                </p>
-
-                <p>
-                    Sequi odit rem quis animi temporibus ratione repellat architecto, aperiam eius nesciunt debitis
-                    aliquam similique esse vero quia commodi laborum libero, cupiditate adipisci. Perferendis
-                    soluta esse illo autem possimus itaque? Eligendi sed est eum ad itaque temporibus, accusamus ex
-                    neque mollitia delectus minus soluta distinctio labore dignissimos reiciendis. Labore qui eveniet
-                    fugiat veniam doloremque praesentium atque numquam optio distinctio hic!
-                </p>
-
-                <p>
-                    Sequi odit rem quis animi temporibus ratione repellat architecto, aperiam eius nesciunt debitis
-                    aliquam similique esse vero quia commodi laborum libero, cupiditate adipisci. Perferendis
-                    soluta esse illo autem possimus itaque? Eligendi sed est eum ad itaque temporibus, accusamus ex
-                    neque mollitia delectus minus soluta distinctio labore dignissimos reiciendis. Labore qui eveniet
-                    fugiat veniam doloremque praesentium atque numquam optio distinctio hic!
-                </p>
-
-                <p>
-                    Sequi odit rem quis animi temporibus ratione repellat architecto, aperiam eius nesciunt debitis
-                    aliquam similique esse vero quia commodi laborum libero, cupiditate adipisci. Perferendis
-                    soluta esse illo autem possimus itaque? Eligendi sed est eum ad itaque temporibus, accusamus ex
-                    neque mollitia delectus minus soluta distinctio labore dignissimos reiciendis. Labore qui eveniet
-                    fugiat veniam doloremque praesentium atque numquam optio distinctio hic!
-                </p>
+                <p>Start here!</p>
 
             </div>
 
@@ -197,7 +167,7 @@
 
     </div>
 
-    <script src="./bundle/bundle.js"></script>
+    <script src="./assets/bundle/bundle.js"></script>
 </body>
 
 </html>
