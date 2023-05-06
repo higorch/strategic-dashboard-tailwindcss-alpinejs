@@ -5,13 +5,13 @@ module.exports = {
   theme: {
     extend: {
       height: {
-        "side-header": "100px",
-        "side-footer": "75px",
+        "side-body": "calc(100vh - 180px)",
+        "side-header": "90px",
+        "side-footer": "90px",
         "content-header": "70px",
         "content-footer": "75px",
       },
       minHeight: {
-        "side-body": "calc(100vh - 175px)",
         "content-body": "calc(100vh - 145px)",
       },
       colors: {
