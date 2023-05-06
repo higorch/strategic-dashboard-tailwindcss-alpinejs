@@ -28,7 +28,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="flex items-center py-[10px] text-base font-bold text-gray-900 dark:text-theme-primary">
+                        <a href="#" class="flex items-center py-[10px] text-base font-bold text-gray-900">
                             <i class="fa-solid fa-list-check mr-[10px]"></i>
                             <span>Projects</span>
                         </a>
@@ -77,7 +77,7 @@
                 </ul>
             </nav>
 
-            <div class="flex flex-row mx-[30px] mb-[15px] border-t-[1px] border-stone-200 dark:border-slate-500">
+            <div class="flex flex-row mx-[30px] border-t-[1px] border-stone-200 dark:border-slate-500">
                 <div class="flex flex-col justify-start items-center w-full p-[15px]">
                     <div class="block relative w-[60px] h-[60px] rounded-full overflow-hidden">
                         <img src="./assets/img/adam-wathan.jpg">
@@ -101,7 +101,7 @@
             <div class="flex justify-between items-center w-full h-content-header sticky top-0 box-border border-b-[1px] border-stone-200 dark:border-slate-500 bg-theme-primary dark:bg-slate-800">
 
                 <div class="flex flex-row justify-between items-center gap-[15px]">
-                    <span class="text-[20px] cursor-pointer text-slate-500 dark:text-theme-primary" @click="openSide = !openSide">
+                    <span class="text-[20px] cursor-pointer text-slate-500" @click="openSide = !openSide">
                         <i class="fa-solid" :class="{'fa-arrow-left': openSide, 'fa-bars': !openSide}"></i>
                     </span>
                 </div>
@@ -109,7 +109,7 @@
                 <div class="flex flex-row justify-between items-center gap-[30px]">
 
                     <div class="flex">
-                        <a href="#" class="text-[20px] text-slate-500 dark:text-theme-primary" @click.prevent="darkMode = !darkMode">
+                        <a href="#" class="text-[20px] text-slate-500" @click.prevent="darkMode = !darkMode">
                             <i class="fa-solid fa-moon" :class="{'fa-moon': !darkMode, 'fa-sun': darkMode}"></i>
                         </a>
                     </div>
@@ -117,13 +117,13 @@
                     <div class="flex gap-[20px]">
 
                         <div x-data="{open: false}" class="relative" @click.outside="open = false">
-                            <a href="#" class="relative text-[20px] text-slate-500 dark:text-theme-primary" @click.prevent="open = !open">
+                            <a href="#" class="relative text-[20px] text-slate-500" @click.prevent="open = !open">
                                 <span class="absolute right-[2px] top-[3px] w-[8px] h-[8px] rounded-full bg-red-600"></span>
                                 <i class="fa-solid fa-envelope"></i>
                             </a>
                             <div class="flex-col gap-[10px] w-[225px] absolute top-full right-0 p-[15px] z-50 rounded-[10px] shadow-lg shadow-neutral-300 dark:shadow-neutral-900 bg-white dark:bg-slate-800 hidden" :class="{'flex': open, 'hidden': !open}">
                                 <div class="flex flex-col">
-                                    <span class="font-bold text-base text-black dark:text-theme-primary">Messages</span>
+                                    <span class="font-bold text-base text-slate-500">Messages</span>
                                 </div>
                                 <hr class="border-theme-primary dark:border-slate-500">
                                 <div>...</div>
@@ -131,13 +131,13 @@
                         </div>
 
                         <div x-data="{open: false}" class="relative" @click.outside="open = false">
-                            <a href="#" class="relative text-[20px] text-slate-500 dark:text-theme-primary" @click.prevent="open = !open">
+                            <a href="#" class="relative text-[20px] text-slate-500" @click.prevent="open = !open">
                                 <span class="absolute right-[2px] top-[3px] w-[8px] h-[8px] rounded-full bg-red-600"></span>
                                 <i class="fa-solid fa-bell"></i>
                             </a>
                             <div class="flex-col gap-[10px] w-[225px] absolute top-full right-0 p-[15px] z-50 rounded-[10px] shadow-lg shadow-neutral-300 dark:shadow-neutral-900 bg-white dark:bg-slate-800 hidden" :class="{'flex': open, 'hidden': !open}">
                                 <div class="flex flex-col">
-                                    <span class="font-bold text-base text-black dark:text-theme-primary">Notifications</span>
+                                    <span class="font-bold text-base text-slate-500">Notifications</span>
                                 </div>
                                 <hr class="border-theme-primary dark:border-slate-500">
                                 <div>...</div>
