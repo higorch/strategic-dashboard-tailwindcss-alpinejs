@@ -15,11 +15,11 @@
 
         <div class="fixed left-0 flex flex-col w-[270px] h-screen border-r-[1px] transition-all border-theme-gray-secondary" :class="{'left-0': openSide, 'left-[-270px]': !openSide}">
 
-            <div class="flex justify-start items-center w-full h-side-header sticky top-0 px-[30px] bg-theme-gray-primary">
+            <div class="flex justify-start items-center w-full h-side-header sticky top-0 px-[30px] bg-theme-gray-primary dark:bg-slate-800">
                 <img src="./assets/img/logoipsum.svg" class="w-full h-auto">
             </div>
 
-            <nav data-simplebar class="flex min-h-side-body overflow-y-auto bg-theme-gray-primary">
+            <nav data-simplebar class="flex min-h-side-body overflow-y-auto bg-theme-gray-primary dark:bg-slate-800">
                 <ul class="flex flex-col w-full">
                     <li>
                         <a href="#" class="flex items-center py-[10px] px-[30px] text-base font-semibold text-gray-500">
@@ -28,7 +28,7 @@
                         </a>
                     </li>
                     <li class="border-l-[5px] border-gray-900">
-                        <a href="#" class="flex items-center py-[10px] px-[30px] text-base font-bold text-black">
+                        <a href="#" class="flex items-center py-[10px] px-[30px] text-base font-bold text-black dark:text-theme-gray-secondary">
                             <i class="fa-solid fa-list-check mr-[10px]"></i>
                             <span>Projects</span>
                         </a>
@@ -89,7 +89,7 @@
                 </ul>
             </nav>
 
-            <div class="flex justify-between items-center sticky bottom-0 gap-[15px] w-full h-side-footer px-[30px] bg-theme-gray-primary">
+            <div class="flex justify-between items-center sticky bottom-0 gap-[15px] w-full h-side-footer px-[30px] bg-theme-gray-primary dark:bg-slate-800">
                 <a href="#" title="Settings" class="flex justify-center items-center w-[40px] h-[40px] text-[18px] rounded-full text-gray-500 bg-theme-gray-secondary">
                     <i class="fa-solid fa-gear"></i>
                 </a>
@@ -102,7 +102,7 @@
 
         <div class="flex flex-col w-full ml-[270px] transition-all" :class="{'ml-[270px]': openSide, 'ml-0': !openSide}">
 
-            <div class="flex justify-between items-center w-full h-content-header sticky top-0 px-[30px] bg-theme-gray-primary">
+            <div class="flex justify-between items-center w-full h-content-header sticky top-0 px-[30px] bg-theme-gray-primary dark:bg-slate-800">
 
                 <div>
                     <span class="text-[18px] text-gray-500 cursor-pointer" @click="openSide = !openSide">
@@ -145,19 +145,19 @@
 
                 </div>
 
-                <span class="absolute left-[30px] right-[30px] bottom-0 border-b-[1px] z-10 border-theme-gray-secondary"></span>
+                <hr class="absolute left-[30px] right-[30px] bottom-0 z-10 border-theme-gray-secondary" />
 
             </div>
 
-            <div class="w-full min-h-content-body px-[30px] bg-theme-gray-primary">
+            <div class="w-full min-h-content-body px-[30px] bg-theme-gray-primary dark:bg-slate-800">
 
                 <p>Start here!</p>
 
             </div>
 
-            <div class="flex items-center w-full h-content-footer relative px-[30px] bg-theme-gray-primary">
+            <div class="flex items-center w-full h-content-footer relative px-[30px] bg-theme-gray-primary dark:bg-slate-800">
 
-                <span class="absolute left-[30px] right-[30px] top-0 border-b-[1px] border-theme-gray-secondary"></span>
+                <hr class="absolute left-[30px] right-[30px] top-0 border-theme-gray-secondary" />
 
                 <span class="text-gray-500 text-sm">&copy; 2023 - Strategic Dashboard</span>
 
