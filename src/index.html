@@ -6,20 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Strategic Dashboard</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/bundle/app.css">
 </head>
 
 <body x-data="{openSide: true, darkMode: false}" :class="{'dark': darkMode}">
 
-    <div class="flex flex-row relative bg-theme-primary dark:bg-slate-800">
+    <div class="flex flex-row relative bg-theme-primary dark:bg-neutral-900">
 
-        <div class="flex flex-col fixed top-[30px] bottom-[30px] left-[30px] w-[270px] py-[15px] transition-all rounded-[10px] shadow-lg sha shadow-neutral-300 dark:shadow-neutral-900" :class="{'left-[30px]': openSide, 'left-[-300px]': !openSide}">
+        <div class="flex flex-col fixed top-[30px] bottom-[30px] left-[30px] w-[270px] py-[15px] transition-[left] rounded-[10px] shadow-md shadow-neutral-300 dark:shadow-neutral-950" :class="{'left-[30px]': openSide, 'left-[-300px]': !openSide}">
 
-            <div class="flex justify-start items-center w-full py-[15px] px-[30px] bg-theme-primary dark:bg-slate-800">
+            <div class="flex justify-start items-center w-full py-[15px] px-[30px]">
                 <img src="./assets/img/logoipsum.svg" class="w-10/12 h-auto">
             </div>
 
-            <nav class="flex overflow-y-auto px-[30px] py-[15px] mb-auto bg-theme-primary dark:bg-slate-800" data-simplebar>
+            <nav class="flex overflow-y-auto px-[30px] py-[15px] mb-auto" data-simplebar>
                 <ul class="flex flex-col w-full">
                     <li>
                         <a href="#" class="flex items-center py-[10px] text-base font-semibold text-slate-500">
@@ -77,7 +77,7 @@
                 </ul>
             </nav>
 
-            <div class="flex flex-row mx-[30px] border-t-[1px] border-stone-200 dark:border-slate-500">
+            <div class="flex flex-row mx-[30px] border-t-[1px] border-stone-200 dark:border-neutral-800">
                 <div class="flex flex-col justify-start items-center w-full p-[15px]">
                     <div class="block relative w-[60px] h-[60px] rounded-full overflow-hidden">
                         <img src="./assets/img/adam-wathan.jpg">
@@ -96,9 +96,9 @@
 
         </div>
 
-        <div class="flex flex-col w-full ml-[330px] mr-[30px] transition-all" :class="{'ml-[330px]': openSide, 'ml-[30px]': !openSide}">
+        <div class="flex flex-col w-full ml-[330px] mr-[30px] transition-[margin-left]" :class="{'ml-[330px]': openSide, 'ml-[30px]': !openSide}">
 
-            <div class="flex justify-between items-center w-full h-content-header sticky top-0 box-border border-b-[1px] border-stone-200 dark:border-slate-500 bg-theme-primary dark:bg-slate-800">
+            <div class="flex justify-between items-center w-full h-content-header sticky top-0 box-border border-b-[1px] border-stone-200 dark:border-neutral-800">
 
                 <div class="flex flex-row justify-between items-center gap-[15px]">
                     <span class="text-[20px] cursor-pointer text-slate-500" @click="openSide = !openSide">
@@ -121,11 +121,11 @@
                                 <span class="absolute right-[2px] top-[3px] w-[8px] h-[8px] rounded-full bg-red-600"></span>
                                 <i class="fa-solid fa-envelope"></i>
                             </a>
-                            <div class="flex-col gap-[10px] w-[225px] absolute top-full right-0 p-[15px] z-50 rounded-[10px] shadow-lg shadow-neutral-300 dark:shadow-neutral-900 bg-white dark:bg-slate-800 hidden" :class="{'flex': open, 'hidden': !open}">
+                            <div class="flex-col gap-[10px] w-[225px] absolute top-full right-0 p-[15px] z-50 rounded-[10px] shadow-md shadow-neutral-300 dark:shadow-neutral-950 bg-white dark:bg-neutral-900 hidden" :class="{'flex': open, 'hidden': !open}">
                                 <div class="flex flex-col">
                                     <span class="font-bold text-base text-slate-500">Messages</span>
                                 </div>
-                                <hr class="border-theme-primary dark:border-slate-500">
+                                <hr class="border-theme-primary dark:border-neutral-800">
                                 <div>...</div>
                             </div>
                         </div>
@@ -135,11 +135,11 @@
                                 <span class="absolute right-[2px] top-[3px] w-[8px] h-[8px] rounded-full bg-red-600"></span>
                                 <i class="fa-solid fa-bell"></i>
                             </a>
-                            <div class="flex-col gap-[10px] w-[225px] absolute top-full right-0 p-[15px] z-50 rounded-[10px] shadow-lg shadow-neutral-300 dark:shadow-neutral-900 bg-white dark:bg-slate-800 hidden" :class="{'flex': open, 'hidden': !open}">
+                            <div class="flex-col gap-[10px] w-[225px] absolute top-full right-0 p-[15px] z-50 rounded-[10px] shadow-md shadow-neutral-300 dark:shadow-neutral-950 bg-white dark:bg-neutral-900 hidden" :class="{'flex': open, 'hidden': !open}">
                                 <div class="flex flex-col">
                                     <span class="font-bold text-base text-slate-500">Notifications</span>
                                 </div>
-                                <hr class="border-theme-primary dark:border-slate-500">
+                                <hr class="border-theme-primary dark:border-neutral-800">
                                 <div>...</div>
                             </div>
                         </div>
@@ -150,11 +150,11 @@
 
             </div>
 
-            <div class="w-full min-h-content-body bg-theme-primary dark:bg-slate-800">
+            <div class="w-full min-h-content-body">
                 <p>Start here!</p>
             </div>
 
-            <div class="flex items-center w-full h-content-footer relative box-border border-t-[1px] border-stone-200 dark:border-slate-500 bg-theme-primary dark:bg-slate-800">
+            <div class="flex items-center w-full h-content-footer relative box-border border-t-[1px] border-stone-200 dark:border-neutral-800">
                 <span class="text-slate-500 text-sm">&copy; 2023 - Strategic Dashboard</span>
             </div>
 
@@ -162,7 +162,7 @@
 
     </div>
 
-    <script src="./assets/bundle/bundle.js"></script>
+    <script src="./assets/bundle/app.js"></script>
 </body>
 
 </html>
