@@ -11,7 +11,7 @@
 
 <body x-data="{openSide: true, darkMode: false}" :class="{'dark': darkMode}">
 
-    <div class="flex flex-row relative bg-theme-primary dark:bg-neutral-900">
+    <div class="flex flex-row bg-theme-primary dark:bg-neutral-900">
 
         <div class="flex flex-col fixed top-[30px] bottom-[30px] left-[30px] w-[270px] py-[15px] transition-[left] rounded-[10px] shadow-md shadow-neutral-300 dark:shadow-neutral-950" :class="{'left-[30px]': openSide, 'left-[-300px]': !openSide}">
 
@@ -19,7 +19,7 @@
                 <img src="./assets/img/logoipsum.svg" class="w-10/12 h-auto">
             </div>
 
-            <nav class="flex overflow-y-auto px-[30px] py-[15px] mb-auto" data-simplebar>
+            <nav class="flex flex-grow px-[30px] py-[15px] mb-auto overflow-y-auto" data-simplebar>
                 <ul class="flex flex-col w-full">
                     <li>
                         <a href="#" class="flex items-center py-[10px] text-base font-semibold text-slate-500">
@@ -96,17 +96,19 @@
 
         </div>
 
-        <div class="flex flex-col w-full ml-[330px] mr-[30px] transition-[margin-left]" :class="{'ml-[330px]': openSide, 'ml-[30px]': !openSide}">
+        <div class="flex flex-col w-full min-h-screen ml-[330px] mr-[30px] transition-[margin-left]" :class="{'ml-[330px]': openSide, 'ml-[30px]': !openSide}">
 
-            <div class="flex justify-between items-center w-full h-content-header sticky top-0 box-border border-b-[1px] border-stone-200 dark:border-neutral-800">
+            <div class="flex justify-between items-center w-full sticky top-0 py-[15px] mb-[15px] border-b-[1px] border-stone-200 dark:border-neutral-800 bg-theme-primary dark:bg-neutral-900">
 
-                <div class="flex flex-row justify-between items-center gap-[15px]">
+                <div class="flex flex-row gap-[15px]">
+
                     <span class="text-[20px] cursor-pointer text-slate-500" @click="openSide = !openSide">
                         <i class="fa-solid" :class="{'fa-arrow-left': openSide, 'fa-bars': !openSide}"></i>
                     </span>
+
                 </div>
 
-                <div class="flex flex-row justify-between items-center gap-[30px]">
+                <div class="flex flex-row gap-[30px]">
 
                     <div class="flex">
                         <a href="#" class="text-[20px] text-slate-500" @click.prevent="darkMode = !darkMode">
@@ -117,11 +119,11 @@
                     <div class="flex gap-[20px]">
 
                         <div x-data="{open: false}" class="relative" @click.outside="open = false">
-                            <a href="#" class="relative text-[20px] text-slate-500" @click.prevent="open = !open">
-                                <span class="absolute right-[2px] top-[3px] w-[8px] h-[8px] rounded-full bg-red-600"></span>
+                            <span class="absolute right-[-3px] top-[3px] w-[8px] h-[8px] rounded-full bg-red-500"></span>
+                            <a href="#" class="text-[20px] text-slate-500" @click.prevent="open = !open">
                                 <i class="fa-solid fa-envelope"></i>
                             </a>
-                            <div class="flex-col gap-[10px] w-[225px] absolute top-full right-0 p-[15px] z-50 rounded-[10px] shadow-md shadow-neutral-300 dark:shadow-neutral-950 bg-white dark:bg-neutral-900 hidden" :class="{'flex': open, 'hidden': !open}">
+                            <div class="flex-col gap-[10px] w-[260px] absolute top-full right-0 p-[15px] z-50 rounded-[10px] shadow-md shadow-neutral-300 dark:shadow-neutral-950 bg-white dark:bg-neutral-900 hidden" :class="{'flex': open, 'hidden': !open}">
                                 <div class="flex flex-col">
                                     <span class="font-bold text-base text-slate-500">Messages</span>
                                 </div>
@@ -131,11 +133,11 @@
                         </div>
 
                         <div x-data="{open: false}" class="relative" @click.outside="open = false">
-                            <a href="#" class="relative text-[20px] text-slate-500" @click.prevent="open = !open">
-                                <span class="absolute right-[2px] top-[3px] w-[8px] h-[8px] rounded-full bg-red-600"></span>
+                            <span class="absolute right-[-3px] top-[3px] w-[8px] h-[8px] rounded-full bg-red-500"></span>
+                            <a href="#" class="text-[20px] text-slate-500" @click.prevent="open = !open">
                                 <i class="fa-solid fa-bell"></i>
                             </a>
-                            <div class="flex-col gap-[10px] w-[225px] absolute top-full right-0 p-[15px] z-50 rounded-[10px] shadow-md shadow-neutral-300 dark:shadow-neutral-950 bg-white dark:bg-neutral-900 hidden" :class="{'flex': open, 'hidden': !open}">
+                            <div class="flex-col gap-[10px] w-[260px] absolute top-full right-0 p-[15px] z-50 rounded-[10px] shadow-md shadow-neutral-300 dark:shadow-neutral-950 bg-white dark:bg-neutral-900 hidden" :class="{'flex': open, 'hidden': !open}">
                                 <div class="flex flex-col">
                                     <span class="font-bold text-base text-slate-500">Notifications</span>
                                 </div>
@@ -150,11 +152,16 @@
 
             </div>
 
-            <div class="w-full min-h-content-body">
-                <p>Start here!</p>
+            <div class="flex-grow w-full">
+
+                <div>
+                    <h1 class="font-bold text-[26px] text-slate-900 dark:text-slate-400">Blank page</h1>
+                    <p class="text-[14px] text-slate-500">Start creating here!</p>
+                </div>
+
             </div>
 
-            <div class="flex items-center w-full h-content-footer relative box-border border-t-[1px] border-stone-200 dark:border-neutral-800">
+            <div class="flex items-center w-full py-[30px] relative box-border border-t-[1px] border-stone-200 dark:border-neutral-800">
                 <span class="text-slate-500 text-sm">&copy; 2023 - Strategic Dashboard</span>
             </div>
 
