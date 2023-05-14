@@ -1,5 +1,5 @@
-import { TreeNode } from 'butterfly-dag';
-import { TreeCanvas } from 'butterfly-dag';
+import { TreeNode, TreeCanvas } from 'butterfly-dag/pack/index.js';
+import 'butterfly-dag/dist/index.css';
 
 class BaseNode extends TreeNode {
     constructor(opts) {
@@ -68,20 +68,33 @@ document.addEventListener('alpine:init', () => {
             // });
         },
         add() {
+
             this.canvas.addNode({
                 text: `我是id为的节点`,
                 Class: BaseNode,
                 condition: 'and',
                 desc: '请选择指标',
                 endpoints: [{
-                    id: 'left',
-                    orientation: [-1, 0],
-                    pos: [0, 0.5]
+                    id: 'top',
+                    orientation: [0, -1],
+                    pos: [0.5, 0]
                 }, {
                     id: 'bottom',
                     orientation: [0, 1],
                     pos: [0.5, 0]
-                }],
+                }]
+            });
+
+            this.canvas.addEdge({
+                source: 'top',
+                target: 'bottom',
+                sourceNode: 'node_1',
+                targetNode: 'node_2',
+                type: 'endpoint',
+                arrow: true,
+                arrowPosition: 0.5,
+                arrowOffset: 0,  // final position of the arrow：lineLength * arrowPosition + arrowOffset
+                label: 'I am label'   //Here you can also pass dom, of course, you can also extend the parent class's drawLabel to
             });
         }
     }));
