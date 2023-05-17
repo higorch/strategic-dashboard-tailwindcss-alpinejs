@@ -77,6 +77,9 @@ document.addEventListener('alpine:init', () => {
                 desc: 'Aqui é uma descrição',
                 endpoints: endpoints
             });
+        },
+        center() {
+            this.canvas.focusCenterWithAnimate();
         }
     }));
 

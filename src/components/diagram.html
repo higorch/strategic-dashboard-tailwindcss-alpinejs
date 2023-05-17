@@ -165,15 +165,29 @@
 
             </div>
 
-            <div class="flex-grow w-full relative">
+            <div class="flex flex-col flex-grow w-full">
 
-                <div x-data="diagram" class="flex flex-col absolute w-full top-[15px] bottom-[30px] rounded-md shadow-inner shadow-neutral-300 dark:shadow-neutral-950">
-                    <div class="flex-grow">
-                        <div class="absolute z-10 left-[15px] top-[15px]">
-                            <a href="#" @click.prevent="add">add</a>
-                        </div>
-                        <div x-ref="render" class="absolute w-full h-full"></div>
+                <div class="flex justify-between items-center">
+                    <div>
+                        <h3 class="font-semibold text-[22px] text-slate-900 dark:text-slate-400">Action Plan</h3>
                     </div>
+                </div>
+
+                <div class="flex flex-grow flex-col w-full relative" x-data="diagram">
+
+                    <div class="absolute w-full top-0 bottom-[30px] mt-[30px] rounded-lg border-[3px] border-dotted border-stone-200 dark:border-neutral-800" x-ref="render">
+
+                        <div class="flex justify-center items-center gap-[15px] absolute z-10 bottom-[15px] left-[15px] py-[5px] px-[10px] rounded-lg border-[1px] border-slate-300 dark:border-neutral-950 bg-slate-100 dark:bg-slate-800">
+                            <a href="#"class="text-base cursor-pointer text-slate-500"  @click.prevent="center">
+                                <i class="fa-solid fa-arrows-to-dot"></i>
+                            </a>
+                            <a href="#" class="text-base cursor-pointer text-slate-500" @click.prevent="add">
+                                <i class="fa-solid fa-plus"></i>
+                            </a>
+                        </div>
+                        
+                    </div>
+
                 </div>
 
             </div>
