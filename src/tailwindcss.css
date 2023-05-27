@@ -7,3 +7,14 @@
         @apply bg-slate-500;
     }
 }
+
+@layer components {
+
+    .label-for-input-basic {
+        @apply block text-gray-500 text-sm font-bold mb-[5px];
+    }
+    
+    .input-basic {
+        @apply w-full h-[50px] p-[8px] rounded-lg text-gray-600 dark:text-gray-400 border-[2px] border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800;
+    }
+}
