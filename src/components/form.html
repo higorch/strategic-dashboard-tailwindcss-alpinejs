@@ -180,17 +180,17 @@
                     <div class="grid grid-cols-6 gap-x-[30px] gap-y-[15px] p-[30px]">
                         
                         <div class="col-span-full md:col-span-3">
-                            <label class="label-for-input-basic">Name</label>
+                            <label class="label-basic block">Name</label>
                             <input type="text" class="input-basic">
                         </div>
             
                         <div class="col-span-full md:col-span-3">
-                            <label class="label-for-input-basic">E-mail</label>
+                            <label class="label-basic block">E-mail</label>
                             <input type="text" class="input-basic">
                         </div>
             
                         <div class="col-span-full md:col-span-3">
-                            <label class="label-for-input-basic">Work</label>
+                            <label class="label-basic block">Work</label>
                             <select class="input-basic">
                                 <option>---</option>
                                 <option value="1">option 1</option>
@@ -199,8 +199,32 @@
                         </div>
             
                         <div class="col-span-full md:col-span-3">
-                            <label class="label-for-input-basic">Phone</label>
+                            <label class="label-basic block">Phone</label>
                             <input type="text" class="input-basic">
+                        </div>
+
+                        <div class="col-span-full md:col-span-6">
+                            <span class="block font-medium text-base mb-[10px] text-slate-900 dark:text-slate-400">Region where you live?</span>
+                            <div class="flex gap-[15px]">
+                                <label class="label-basic flex items-center gap-[5px]">
+                                    <input type="radio" name="region" value="North" class="input-check-basic">
+                                    <span>North</span>
+                                </label>
+                                <label class="label-basic flex items-center gap-[5px]">
+                                    <input type="radio" name="region" value="South" class="input-check-basic">
+                                    <span>South</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="col-span-full md:col-span-6">
+                            <span class="block font-medium text-base mb-[10px] text-slate-900 dark:text-slate-400">Accept terms?</span>
+                            <div class="flex gap-[15px]">
+                                <label class="label-basic flex items-center gap-[5px]">
+                                    <input type="checkbox" class="input-check-basic">
+                                    <span>Accept.</span>
+                                </label>
+                            </div>
                         </div>
                         
                     </div>

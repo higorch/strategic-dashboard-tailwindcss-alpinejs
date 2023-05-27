@@ -10,11 +10,18 @@
 
 @layer components {
 
-    .label-for-input-basic {
-        @apply block text-gray-500 text-sm font-bold mb-[5px];
+    .label-basic {
+        @apply text-gray-500 text-sm font-bold mb-[5px];
     }
-    
+
     .input-basic {
         @apply w-full h-[50px] p-[8px] rounded-lg text-gray-600 dark:text-gray-400 border-[2px] border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800;
+    }
+    .input-basic:focus {
+        @apply outline-none shadow-none border-gray-400 dark:border-gray-500;
+    }
+    
+    .input-check-basic {
+        @apply accent-black dark:accent-white w-[18px] h-[18px];
     }
 }
