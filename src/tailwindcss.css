@@ -22,6 +22,6 @@
     }
     
     .input-check-basic {
-        @apply accent-black dark:accent-white w-[18px] h-[18px];
+        @apply accent-black dark:accent-white w-[16px] h-[16px];
     }
 }
