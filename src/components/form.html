@@ -13,7 +13,7 @@
 
     <div class="flex flex-row bg-theme-primary dark:bg-zinc-900">
 
-        <div class="flex flex-col fixed top-[30px] bottom-[30px] left-[30px] w-[270px] py-[15px] transition-[left] rounded-[10px] shadow-sm shadow-gray-300 dark:shadow-gray-950" :class="{'left-[30px]': openSide, 'left-[-300px]': !openSide}">
+        <div class="flex flex-col fixed top-[30px] bottom-[30px] left-[30px] w-[270px] py-[15px] transition-[left] rounded-lg shadow-sm shadow-gray-300 dark:shadow-gray-950" :class="{'left-[30px]': openSide, 'left-[-300px]': !openSide}">
 
             <div class="flex justify-start items-center w-full py-[15px] px-[30px]">
                 <img src="../assets/img/logoipsum.svg" class="w-10/12 h-auto">
@@ -104,7 +104,7 @@
 
             <div class="flex flex-col w-full sticky top-0 pt-[30px] mb-[15px] bg-theme-primary dark:bg-zinc-900">
 
-                <div class="flex justify-between items-center p-[15px] rounded-[10px] shadow-sm shadow-gray-300 dark:shadow-gray-950">
+                <div class="flex justify-between items-center p-[15px] rounded-lg shadow-sm shadow-gray-300 dark:shadow-gray-950">
 
                     <div class="flex flex-row gap-[15px]">
 
@@ -133,7 +133,7 @@
                                 <a href="#" class="text-[20px] text-slate-500" @click.prevent="open = !open">
                                     <i class="fa-solid fa-envelope"></i>
                                 </a>
-                                <div class="flex-col gap-[10px] w-[260px] absolute top-[35px] right-0 p-[15px] z-50 rounded-[10px] shadow-sm shadow-gray-300 dark:shadow-neutral-950 bg-gray-50 dark:bg-gray-800 hidden" :class="{'flex': open, 'hidden': !open}">
+                                <div class="flex-col gap-[10px] w-[260px] absolute top-[35px] right-0 p-[15px] z-50 rounded-lg shadow-sm shadow-gray-300 dark:shadow-neutral-950 bg-gray-50 dark:bg-gray-800 hidden" :class="{'flex': open, 'hidden': !open}">
                                     <div class="flex flex-col">
                                         <span class="font-bold text-base text-slate-500 dark:text-slate-400">Messages</span>
                                     </div>
@@ -147,7 +147,7 @@
                                 <a href="#" class="text-[20px] text-slate-500" @click.prevent="open = !open">
                                     <i class="fa-solid fa-bell"></i>
                                 </a>
-                                <div class="flex-col gap-[10px] w-[260px] absolute top-[35px] right-0 p-[15px] z-50 rounded-[10px] shadow-sm shadow-gray-300 dark:shadow-neutral-950 bg-gray-50 dark:bg-gray-800 hidden" :class="{'flex': open, 'hidden': !open}">
+                                <div class="flex-col gap-[10px] w-[260px] absolute top-[35px] right-0 p-[15px] z-50 rounded-lg shadow-sm shadow-gray-300 dark:shadow-neutral-950 bg-gray-50 dark:bg-gray-800 hidden" :class="{'flex': open, 'hidden': !open}">
                                     <div class="flex flex-col">
                                         <span class="font-bold text-base text-slate-500 dark:text-slate-400">Notifications</span>
                                     </div>
@@ -173,7 +173,7 @@
                 </div>
 
                 <!-- CARD -->
-                <div class="flex flex-col mt-[30px] rounded-[10px] shadow-sm shadow-gray-300 dark:shadow-gray-950">
+                <div class="flex flex-col mt-[30px] rounded-lg shadow-sm shadow-gray-300 dark:shadow-gray-950">
                     <div class="flex w-full px-[30px] py-[15px] border-b-[1px] border-gray-200 dark:border-gray-700">
                         <h4 class="font-medium text-[20px] text-slate-900 dark:text-slate-400">Basic form elements</h4>
                     </div>
