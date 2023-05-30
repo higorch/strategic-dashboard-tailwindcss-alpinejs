@@ -991,6 +991,10 @@ video {
   position: sticky;
 }
 
+.bottom-\[0\] {
+  bottom: 0;
+}
+
 .bottom-\[15px\] {
   bottom: 15px;
 }
@@ -1422,7 +1426,7 @@ video {
 
 .bg-theme-primary {
   --tw-bg-opacity: 1;
-  background-color: rgb(238 249 249 / var(--tw-bg-opacity));
+  background-color: rgb(249 250 255 / var(--tw-bg-opacity));
 }
 
 .p-\[15px\] {
@@ -1441,6 +1445,11 @@ video {
 .px-\[15px\] {
   padding-left: 15px;
   padding-right: 15px;
+}
+
+.px-\[1px\] {
+  padding-left: 1px;
+  padding-right: 1px;
 }
 
 .px-\[30px\] {
