@@ -100,7 +100,7 @@
 
         </div>
 
-        <div class="flex flex-col w-full min-h-screen ml-[330px] mr-[30px] transition-[margin-left]" :class="{'ml-[330px]': openSide, 'ml-[30px]': !openSide}">
+        <div class="flex flex-col w-content min-h-screen ml-auto px-[30px] transition-[width]" :class="{'w-content': openSide, 'w-full': !openSide}">
 
             <div class="flex flex-col w-full sticky top-0 pt-[30px] mb-[15px] bg-theme-primary dark:bg-zinc-900">
 
@@ -205,7 +205,7 @@
 
                         </div>
 
-                        <div>
+                        <div class="max-w-full overflow-x-auto">
 
                             <table class="table-auto w-full text-sm">
                                 <thead>

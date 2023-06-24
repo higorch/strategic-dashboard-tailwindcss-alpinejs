@@ -1068,6 +1068,11 @@ video {
   margin-right: 30px;
 }
 
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .mb-\[10px\] {
   margin-bottom: 10px;
 }
@@ -1114,6 +1119,10 @@ video {
 
 .mt-\[5px\] {
   margin-top: 5px;
+}
+
+.ml-auto {
+  margin-left: auto;
 }
 
 .box-border {
@@ -1232,8 +1241,16 @@ video {
   width: 8px;
 }
 
+.w-content {
+  width: calc(100% - 300px);
+}
+
 .w-full {
   width: 100%;
+}
+
+.max-w-full {
+  max-width: 100%;
 }
 
 .flex-1 {
@@ -1276,6 +1293,10 @@ video {
   flex-direction: column;
 }
 
+.content-end {
+  align-content: flex-end;
+}
+
 .items-center {
   align-items: center;
 }
@@ -1286,6 +1307,10 @@ video {
 
 .justify-start {
   justify-content: flex-start;
+}
+
+.justify-end {
+  justify-content: flex-end;
 }
 
 .justify-center {
@@ -1321,8 +1346,16 @@ video {
   row-gap: 15px;
 }
 
+.place-self-end {
+  place-self: end;
+}
+
 .overflow-hidden {
   overflow: hidden;
+}
+
+.overflow-x-auto {
+  overflow-x: auto;
 }
 
 .overflow-y-auto {
@@ -1332,6 +1365,10 @@ video {
 .truncate {
   overflow: hidden;
   text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.whitespace-nowrap {
   white-space: nowrap;
 }
 
@@ -1659,6 +1696,12 @@ video {
 
 .transition-\[margin-left\] {
   transition-property: margin-left;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.transition-\[width\] {
+  transition-property: width;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
