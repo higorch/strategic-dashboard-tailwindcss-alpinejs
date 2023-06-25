@@ -13,7 +13,7 @@
 
     <div class="flex flex-row bg-theme-primary dark:bg-zinc-900">
 
-        <div class="flex flex-col fixed top-[30px] bottom-[30px] left-[30px] w-[270px] py-[15px] transition-[left] rounded-lg shadow-sm shadow-gray-300 dark:shadow-gray-950" :class="{'left-[30px]': openSide, 'left-[-300px]': !openSide}">
+        <div class="flex flex-col fixed z-20 top-0 sm:top-[30px] bottom-0 sm:bottom-[30px] sm:left-[30px] w-[270px] py-[15px] transition-[left] sm:rounded-lg shadow-sm shadow-gray-300 dark:shadow-gray-950 bg-theme-primary dark:bg-zinc-900" :class="{'left-0 sm:left-[30px]': openSide, 'left-[-270px]': !openSide}">
 
             <div class="flex justify-start items-center w-full py-[15px] px-[30px]">
                 <img src="../assets/img/logoipsum.svg" class="w-10/12 h-auto">
@@ -100,7 +100,7 @@
 
         </div>
 
-        <div class="flex flex-col w-content min-h-screen ml-auto px-[30px] transition-[width]" :class="{'w-content': openSide, 'w-full': !openSide}">
+        <div class="flex flex-col w-full sm:w-content min-h-screen relative z-10 ml-auto px-[30px] transition-[width]" :class="{'w-full sm:w-content': openSide, 'w-full': !openSide}">
 
             <div class="flex flex-col w-full sticky top-0 pt-[30px] mb-[15px] bg-theme-primary dark:bg-zinc-900">
 
