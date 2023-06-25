@@ -752,10 +752,6 @@ video {
   inset: 0px;
 }
 
-.bottom-0 {
-  bottom: 0px;
-}
-
 .bottom-\[0\] {
   bottom: 0;
 }
@@ -770,10 +766,6 @@ video {
 
 .left-0 {
   left: 0px;
-}
-
-.left-\[-270px\] {
-  left: -270px;
 }
 
 .left-\[-300px\] {
@@ -824,26 +816,6 @@ video {
   top: 5px;
 }
 
-.left-\[370px\] {
-  left: 370px;
-}
-
-.left-\[270px\] {
-  left: 270px;
-}
-
-.left-\[0\] {
-  left: 0;
-}
-
-.right-\[-270px\] {
-  right: -270px;
-}
-
-.right-auto {
-  right: auto;
-}
-
 .z-0 {
   z-index: 0;
 }
@@ -858,18 +830,6 @@ video {
 
 .z-50 {
   z-index: 50;
-}
-
-.-z-50 {
-  z-index: -50;
-}
-
-.z-auto {
-  z-index: auto;
-}
-
-.z-30 {
-  z-index: 30;
 }
 
 .col-span-full {
@@ -1005,16 +965,8 @@ video {
   height: 100%;
 }
 
-.h-screen {
-  height: 100vh;
-}
-
 .min-h-screen {
   min-height: 100vh;
-}
-
-.w-0 {
-  width: 0px;
 }
 
 .w-10\/12 {
@@ -1039,6 +991,10 @@ video {
 
 .w-\[2px\] {
   width: 2px;
+}
+
+.w-\[300px\] {
+  width: 300px;
 }
 
 .w-\[50px\] {
@@ -1515,23 +1471,6 @@ video {
   transition-duration: 150ms;
 }
 
-.transition-\[opacity\] {
-  transition-property: opacity;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-}
-
-.transition-\[right\] {
-  transition-property: right;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-}
-
-.content-none {
-  --tw-content: none;
-  content: var(--tw-content);
-}
-
 :is(.dark .dark\:border-gray-700) {
   --tw-border-opacity: 1;
   border-color: rgb(55 65 81 / var(--tw-border-opacity));
@@ -1643,16 +1582,12 @@ video {
 }
 
 @media (min-width: 992px) {
-  .tablet\:bottom-\[30px\] {
-    bottom: 30px;
+  .tablet\:left-0 {
+    left: 0px;
   }
 
-  .tablet\:left-\[30px\] {
-    left: 30px;
-  }
-
-  .tablet\:top-\[30px\] {
-    top: 30px;
+  .tablet\:hidden {
+    display: none;
   }
 
   .tablet\:w-content {
@@ -1661,5 +1596,14 @@ video {
 
   .tablet\:rounded-lg {
     border-radius: 0.5rem;
+  }
+
+  .tablet\:py-\[30px\] {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .tablet\:pl-\[30px\] {
+    padding-left: 30px;
   }
 }
