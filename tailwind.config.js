@@ -11,6 +11,11 @@ module.exports = {
         "theme": {
           "primary": "#f9faff"
         }
+      },
+      screens: {
+        "celular": "768px",
+        "tablet": "992px",
+        "desktop": "1024px",
       }
     },
   },
