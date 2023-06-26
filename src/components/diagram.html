@@ -9,98 +9,104 @@
     <link rel="stylesheet" href="../assets/bundle/app.css">
 </head>
 
-<body x-data="{openSide: true, darkMode: false}" :class="{'dark': darkMode}">
+<body x-data="{openSide: window.innerWidth >= 992, darkMode: false}" :class="{'dark': darkMode}">
 
     <div class="flex flex-row bg-theme-primary dark:bg-zinc-900">
 
-        <div class="flex flex-col fixed top-[30px] bottom-[30px] left-[30px] w-[270px] py-[15px] transition-[left] rounded-lg shadow-sm shadow-gray-300 dark:shadow-gray-950" :class="{'left-[30px]': openSide, 'left-[-300px]': !openSide}">
+        <div class="flex flex-col fixed z-20 inset-0 w-[300px] tablet:pl-[30px] tablet:py-[30px] left-[-300px] tablet:left-0 transition-[left]" :class="{'tablet:left-0': openSide, 'left-[-300px]': !openSide}">
 
-            <div class="flex justify-start items-center w-full py-[15px] px-[30px]">
-                <img src="../assets/img/logoipsum.svg" class="w-10/12 h-auto">
-            </div>
+            <div class="tablet:hidden fixed inset-0 bg-black opacity-60 z-0" x-show="openSide" @click="openSide = false"></div>
 
-            <nav class="flex flex-grow px-[30px] py-[15px] mb-auto overflow-y-auto" data-simplebar>
-                <ul class="flex flex-col w-full">
-                    <li>
-                        <a href="#" class="flex justify-between items-center py-[10px] relative text-base font-semibold text-slate-500">
-                            <span class="flex justify-between items-center gap-[15px]">
-                                <i class="fa-solid fa-gauge-high"></i>
-                                Dashboard
-                            </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="flex justify-between items-center py-[10px] relative text-base font-bold text-slate-900 dark:text-slate-400">
-                            <span class="flex justify-between items-center gap-[15px]">
-                                <i class="fa-solid fa-list-check"></i>
-                                Projects
-                            </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="flex justify-between items-center py-[10px] relative text-base font-semibold text-slate-500">
-                            <span class="flex justify-between items-center gap-[15px]">
-                                <i class="fa-solid fa-rectangle-list"></i>
-                                Kanban
-                            </span>
-                        </a>
-                    </li>
-                    <li x-data="{open: false}">
-                        <a href="#" class="flex justify-between items-center py-[10px] relative text-base font-semibold text-slate-500" @click.prevent="open = !open">
-                            <span class="flex justify-between items-center gap-[15px]">
-                                <i class="fa-brands fa-uikit"></i>
-                                Components
-                            </span>
-                            <i class="fa-solid fa-angle-down text-[12px]" :class="{'fa-angle-up': open, 'fa-angle-down': !open}"></i>
-                        </a>
-                        <ul class="hidden flex-col" :class="{'flex': open, 'hidden': !open}">
-                            <li><a href="./diagram.html" class="flex items-center py-[5px] pl-[30px] pr-[30px] text-base font-normal text-slate-500">Diagram</a></li>
-                            <li><a href="./form.html" class="flex items-center py-[5px] pl-[30px] pr-[30px] text-base font-normal text-slate-500">Form</a></li>
-                            <li><a href="./table.html" class="flex items-center py-[5px] pl-[30px] pr-[30px] text-base font-normal text-slate-500">Table</a></li>
-                            <li><a href="./modal.html" class="flex items-center py-[5px] pl-[30px] pr-[30px] text-base font-normal text-slate-500">Modal</a></li>
-                            <li><a href="./card.html" class="flex items-center py-[5px] pl-[30px] pr-[30px] text-base font-normal text-slate-500">Card</a></li>
-                            <li><a href="./tab.html" class="flex items-center py-[5px] pl-[30px] pr-[30px] text-base font-normal text-slate-500">Tab</a></li>
-                            <li><a href="./accordion.html" class="flex items-center py-[5px] pl-[30px] pr-[30px] text-base font-normal text-slate-500">Accordion</a></li>
-                            <li><a href="./alert.html" class="flex items-center py-[5px] pl-[30px] pr-[30px] text-base font-normal text-slate-500">Alert</a></li>                        
-                        </ul>
-                    </li>
-                    <li x-data="{open: false}">
-                        <a href="#" class="flex justify-between items-center py-[10px] relative text-base font-semibold text-slate-500" @click.prevent="open = !open">
-                            <span class="flex justify-between items-center gap-[15px]">
-                                <i class="fa-solid fa-pager"></i>
-                                Pages
-                            </span>
-                            <i class="fa-solid fa-angle-down text-[12px]" :class="{'fa-angle-up': open, 'fa-angle-down': !open}"></i>
-                        </a>
-                        <ul class="hidden flex-col" :class="{'flex': open, 'hidden': !open}">
-                            <li><a href="../pages/login.html" class="flex items-center py-[5px] pl-[30px] pr-[30px] text-base font-normal text-slate-500">Login</a></li>
-                            <li><a href="../pages/register.html" class="flex items-center py-[5px] pl-[30px] pr-[30px] text-base font-normal text-slate-500">Register</a></li>
-                            <li><a href="../pages/404.html" class="flex items-center py-[5px] pl-[30px] pr-[30px] text-base font-normal text-slate-500">Error 404</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </nav>
+            <div class="flex flex-col w-full h-full py-[15px] z-10 tablet:rounded-lg shadow-sm shadow-gray-300 dark:shadow-gray-950 bg-theme-primary dark:bg-zinc-900">
 
-            <div class="flex flex-row mx-[30px] border-t-[1px] border-gray-200 dark:border-gray-700">
-                <div class="flex flex-col justify-start items-center w-full p-[15px]">
-                    <div class="block relative w-[60px] h-[60px] rounded-full overflow-hidden">
-                        <img src="../assets/img/adam-wathan.jpg">
-                    </div>
-                    <p class="text-[15px] font-bold text-slate-500 mt-[5px] mb-[15px]">Adam Wathan</p>
-                    <div class="flex flex-row gap-[30px]">
-                        <a href="#" title="Settings" class="flex justify-center items-center text-[20px] text-slate-500">
-                            <i class="fa-solid fa-gear"></i>
-                        </a>
-                        <a href="#" title="Logout" class="flex justify-center items-center text-[20px] text-slate-500">
-                            <i class="fa-solid fa-right-from-bracket"></i>
-                        </a>
+                <div class="flex justify-start items-center w-full py-[15px] px-[30px]">
+                    <img src="../assets/img/logoipsum.svg" class="w-10/12 h-auto">
+                </div>
+
+                <nav class="flex flex-grow px-[30px] py-[15px] mb-auto overflow-y-auto" data-simplebar>
+                    <ul class="flex flex-col w-full">
+                        <li>
+                            <a href="#" class="flex justify-between items-center py-[10px] relative text-base font-semibold text-slate-500">
+                                <span class="flex justify-between items-center gap-[15px]">
+                                    <i class="fa-solid fa-gauge-high"></i>
+                                    Dashboard
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="flex justify-between items-center py-[10px] relative text-base font-bold text-slate-900 dark:text-slate-400">
+                                <span class="flex justify-between items-center gap-[15px]">
+                                    <i class="fa-solid fa-list-check"></i>
+                                    Projects
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="flex justify-between items-center py-[10px] relative text-base font-semibold text-slate-500">
+                                <span class="flex justify-between items-center gap-[15px]">
+                                    <i class="fa-solid fa-rectangle-list"></i>
+                                    Kanban
+                                </span>
+                            </a>
+                        </li>
+                        <li x-data="{open: false}">
+                            <a href="#" class="flex justify-between items-center py-[10px] relative text-base font-semibold text-slate-500" @click.prevent="open = !open">
+                                <span class="flex justify-between items-center gap-[15px]">
+                                    <i class="fa-brands fa-uikit"></i>
+                                    Components
+                                </span>
+                                <i class="fa-solid fa-angle-down text-[12px]" :class="{'fa-angle-up': open, 'fa-angle-down': !open}"></i>
+                            </a>
+                            <ul class="hidden flex-col" :class="{'flex': open, 'hidden': !open}">
+                                <li><a href="./diagram.html" class="flex items-center py-[5px] pl-[30px] pr-[30px] text-base font-normal text-slate-500">Diagram</a></li>
+                                <li><a href="./form.html" class="flex items-center py-[5px] pl-[30px] pr-[30px] text-base font-normal text-slate-500">Form</a></li>
+                                <li><a href="./table.html" class="flex items-center py-[5px] pl-[30px] pr-[30px] text-base font-normal text-slate-500">Table</a></li>
+                                <li><a href="./modal.html" class="flex items-center py-[5px] pl-[30px] pr-[30px] text-base font-normal text-slate-500">Modal</a></li>
+                                <li><a href="./card.html" class="flex items-center py-[5px] pl-[30px] pr-[30px] text-base font-normal text-slate-500">Card</a></li>
+                                <li><a href="./tab.html" class="flex items-center py-[5px] pl-[30px] pr-[30px] text-base font-normal text-slate-500">Tab</a></li>
+                                <li><a href="./accordion.html" class="flex items-center py-[5px] pl-[30px] pr-[30px] text-base font-normal text-slate-500">Accordion</a></li>
+                                <li><a href="./alert.html" class="flex items-center py-[5px] pl-[30px] pr-[30px] text-base font-normal text-slate-500">Alert</a></li>                        
+                            </ul>
+                        </li>
+                        <li x-data="{open: false}">
+                            <a href="#" class="flex justify-between items-center py-[10px] relative text-base font-semibold text-slate-500" @click.prevent="open = !open">
+                                <span class="flex justify-between items-center gap-[15px]">
+                                    <i class="fa-solid fa-pager"></i>
+                                    Pages
+                                </span>
+                                <i class="fa-solid fa-angle-down text-[12px]" :class="{'fa-angle-up': open, 'fa-angle-down': !open}"></i>
+                            </a>
+                            <ul class="hidden flex-col" :class="{'flex': open, 'hidden': !open}">
+                                <li><a href="../pages/login.html" class="flex items-center py-[5px] pl-[30px] pr-[30px] text-base font-normal text-slate-500">Login</a></li>
+                                <li><a href="../pages/register.html" class="flex items-center py-[5px] pl-[30px] pr-[30px] text-base font-normal text-slate-500">Register</a></li>
+                                <li><a href="../pages/404.html" class="flex items-center py-[5px] pl-[30px] pr-[30px] text-base font-normal text-slate-500">Error 404</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="flex flex-row mx-[30px] border-t-[1px] border-gray-200 dark:border-gray-700">
+                    <div class="flex flex-col justify-start items-center w-full p-[15px]">
+                        <div class="block relative w-[60px] h-[60px] rounded-full overflow-hidden">
+                            <img src="../assets/img/adam-wathan.jpg">
+                        </div>
+                        <p class="text-[15px] font-bold text-slate-500 mt-[5px] mb-[15px]">Adam Wathan</p>
+                        <div class="flex flex-row gap-[30px]">
+                            <a href="#" title="Settings" class="flex justify-center items-center text-[20px] text-slate-500">
+                                <i class="fa-solid fa-gear"></i>
+                            </a>
+                            <a href="#" title="Logout" class="flex justify-center items-center text-[20px] text-slate-500">
+                                <i class="fa-solid fa-right-from-bracket"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
+
             </div>
 
         </div>
 
-        <div class="flex flex-col w-full min-h-screen ml-[330px] mr-[30px] transition-[margin-left]" :class="{'ml-[330px]': openSide, 'ml-[30px]': !openSide}">
+        <div class="flex flex-col w-full tablet:w-content min-h-screen relative z-10 ml-auto px-[30px] transition-[width]" :class="{'w-full tablet:w-content': openSide, 'w-full': !openSide}">
 
             <div class="flex flex-col w-full sticky top-0 pt-[30px] mb-[15px] bg-theme-primary dark:bg-zinc-900">
 
@@ -118,10 +124,10 @@
 
                         <div class="flex gap-[15px]">
 
-                            <a href="#" class="flex justify-between items-center relative w-[65px] py-[5px] px-[10px] cursor-pointer rounded-full border-[1px] border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800" @click.prevent="darkMode = !darkMode">
-                                <i class="fa-regular fa-moon text-slate-500 text-[16px]"></i>
-                                <i class="fa-regular fa-sun text-slate-500 text-[16px]"></i>
-                                <span class="absolute w-[20px] h-[20px] rounded-full bg-slate-500" :class="{'left-[8px]': darkMode, 'right-[8px]': !darkMode}"></span>
+                            <a href="#" class="flex justify-between items-center relative w-[65px] py-[6px] px-[10px] cursor-pointer rounded-full border-[1px] border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800" @click.prevent="darkMode = !darkMode">
+                                <i class="fa-regular fa-moon text-slate-500 text-[15px]"></i>
+                                <i class="fa-regular fa-sun text-slate-500 text-[15px]"></i>
+                                <span class="absolute w-[20px] h-[20px] rounded-full bg-slate-500" :class="{'left-[6px]': darkMode, 'right-[6px]': !darkMode}"></span>
                             </a>
 
                         </div>
@@ -168,10 +174,10 @@
 
                 <div class="flex justify-between items-center">
                     <div>
-                        <h3 class="font-semibold text-[22px] text-slate-900 dark:text-slate-400">Action Plan</h3>
+                        <h3 class="font-semibold text-[22px] text-slate-900 dark:text-slate-400">Form elements</h3>
                     </div>
                 </div>
-            
+
                 <div class="flex flex-grow flex-col relative w-full mt-[30px]" x-data="diagram">
 
                     <div class="absolute w-full top-0 bottom-[0] rounded-lg border-[3px] border-dotted border-stone-200 dark:border-neutral-800" x-ref="render">

@@ -17,10 +17,10 @@
 
     /* input-basic */
     .input-basic {
-        @apply w-full h-[45px] py-[5px] px-[10px] rounded-lg text-gray-600 dark:text-gray-400 border-[2px] border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800;
+        @apply w-full h-[45px] py-[5px] px-[10px] rounded-lg text-gray-600 dark:text-gray-400 border-[1px] shadow-sm border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800;
     }
     .input-basic:focus {
-        @apply outline-none shadow-none border-gray-400 dark:border-gray-500;
+        @apply outline-none shadow-none border-gray-300 dark:border-gray-600;
     }
     
     /* input-check-basic */
@@ -30,10 +30,10 @@
 
     /* input-group */
     .input-group {
-        @apply flex items-center h-[45px] py-[5px] px-[10px] rounded-lg border-[2px] border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800;
+        @apply flex items-center h-[45px] py-[5px] px-[10px] rounded-lg border-[1px] shadow-sm border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800;
     }
     .input-group:focus-within {
-        @apply border-gray-400 dark:border-gray-500;
+        @apply border-gray-300 dark:border-gray-600;
     }
     .input-group .entry {
         @apply w-full h-full bg-transparent appearance-none outline-none text-gray-600 dark:text-gray-400;
