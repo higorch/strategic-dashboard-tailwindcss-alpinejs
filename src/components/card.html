@@ -13,7 +13,7 @@
 
     <div class="flex flex-row bg-theme-primary dark:bg-zinc-900">
 
-        <div class="flex flex-col fixed z-20 inset-0 w-[300px] tablet:pl-[30px] tablet:py-[30px] left-[-300px] tablet:left-0 transition-[left]" :class="{'tablet:left-0': openSide, 'left-[-300px]': !openSide}">
+        <div class="flex flex-col fixed z-50 inset-0 w-[300px] tablet:pl-[30px] tablet:py-[30px] left-[-300px] tablet:left-0 transition-[left]" :class="{'tablet:left-0': openSide, 'left-[-300px]': !openSide}">
 
             <div class="tablet:hidden fixed inset-0 bg-black opacity-60 z-0" x-show="openSide" @click="openSide = false"></div>
 
@@ -106,7 +106,7 @@
 
         </div>
 
-        <div class="flex flex-col w-full tablet:w-content min-h-screen relative z-10 ml-auto px-[30px] transition-[width]" :class="{'w-full tablet:w-content': openSide, 'w-full': !openSide}">
+        <div class="flex flex-col w-full tablet:w-content min-h-screen ml-auto px-[30px] transition-[width]" :class="{'w-full tablet:w-content': openSide, 'w-full': !openSide}">
 
             <div class="flex flex-col w-full sticky top-0 pt-[30px] mb-[15px] bg-theme-primary dark:bg-zinc-900">
 

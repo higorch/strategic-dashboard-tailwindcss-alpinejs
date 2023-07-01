@@ -13,7 +13,7 @@
 
     <div class="flex flex-row bg-theme-primary dark:bg-zinc-900">
 
-        <div class="flex flex-col fixed z-20 inset-0 w-[300px] tablet:pl-[30px] tablet:py-[30px] left-[-300px] tablet:left-0 transition-[left]" :class="{'tablet:left-0': openSide, 'left-[-300px]': !openSide}">
+        <div class="flex flex-col fixed z-50 inset-0 w-[300px] tablet:pl-[30px] tablet:py-[30px] left-[-300px] tablet:left-0 transition-[left]" :class="{'tablet:left-0': openSide, 'left-[-300px]': !openSide}">
 
             <div class="tablet:hidden fixed inset-0 bg-black opacity-60 z-0" x-show="openSide" @click="openSide = false"></div>
 
@@ -106,7 +106,7 @@
 
         </div>
 
-        <div class="flex flex-col w-full tablet:w-content min-h-screen relative z-10 ml-auto px-[30px] transition-[width]" :class="{'w-full tablet:w-content': openSide, 'w-full': !openSide}">
+        <div class="flex flex-col w-full tablet:w-content min-h-screen ml-auto px-[30px] transition-[width]" :class="{'w-full tablet:w-content': openSide, 'w-full': !openSide}">
 
             <div class="flex flex-col w-full sticky top-0 pt-[30px] mb-[15px] bg-theme-primary dark:bg-zinc-900">
 
@@ -179,6 +179,84 @@
                 </div>
 
                 <div class="w-full mt-[30px]">
+                    
+                    <!-- MODAL -->
+                    <div class="fixed inset-0 z-50">
+                        <div class="fixed inset-0 opacity-60 cursor-pointer bg-black"></div>
+                        <div class="flex items-center justify-center min-h-screen px-[30px] py-[15px]">
+                            <div class="relative w-full max-w-4xl rounded-lg shadow-sm shadow-gray-700 dark:shadow-neutral-950 bg-gray-50 dark:bg-gray-800">
+                                <span class="absolute top-[15px] right-[15px] text-[20px] cursor-pointer text-slate-500">
+                                    <i class="fa-solid fa-xmark"></i>
+                                </span>
+                                <div class="flex items-center w-full px-[30px] py-[15px] border-b-[1px] border-gray-200 dark:border-gray-700">
+                                    <p class="font-medium text-[20px] text-slate-900 dark:text-slate-400">
+                                        Modal form
+                                    </p>
+                                </div>
+                                <div class="flex flex-col px-[30px] py-[15px]">
+                                    
+                                    <!-- FORM -->
+                                    <div class="grid grid-cols-6 gap-x-[30px] gap-y-[15px]">
+                        
+                                        <div class="col-span-full md:col-span-3">
+                                            <label class="label-basic block">Name</label>
+                                            <input type="text" class="input-basic">
+                                        </div>
+                            
+                                        <div class="col-span-full md:col-span-3">
+                                            <label class="label-basic block">E-mail</label>
+                                            <input type="text" class="input-basic">
+                                        </div>
+                            
+                                        <div class="col-span-full md:col-span-3">
+                                            <label class="label-basic block">Work</label>
+                                            <select class="input-basic">
+                                                <option>---</option>
+                                                <option value="1">option 1</option>
+                                                <option value="2">option 2</option>
+                                            </select>
+                                        </div>
+                            
+                                        <div class="col-span-full md:col-span-3">
+                                            <label class="label-basic block">Phone</label>
+                                            <input type="text" class="input-basic">
+                                        </div>
+                
+                                        <div class="col-span-full md:col-span-6">
+                                            <span class="block font-medium text-base mb-[10px] text-slate-900 dark:text-slate-400">Region where you live?</span>
+                                            <div class="flex gap-[15px]">
+                                                <label class="label-basic flex items-center gap-[5px]">
+                                                    <input type="radio" name="region" value="North" class="input-check-basic">
+                                                    <span>North</span>
+                                                </label>
+                                                <label class="label-basic flex items-center gap-[5px]">
+                                                    <input type="radio" name="region" value="South" class="input-check-basic">
+                                                    <span>South</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                
+                                        <div class="col-span-full md:col-span-6">
+                                            <span class="block font-medium text-base mb-[10px] text-slate-900 dark:text-slate-400">Accept terms?</span>
+                                            <div class="flex gap-[15px]">
+                                                <label class="label-basic flex items-center gap-[5px]">
+                                                    <input type="checkbox" class="input-check-basic">
+                                                    <span>Accept.</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                    <!-- FORM -->
+
+                                </div>
+                                <div class="flex justify-end items-center w-full px-[30px] py-[15px] border-t-[1px] border-gray-200 dark:border-gray-700">
+                                    ...
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- MODAL -->
                     
                 </div>
 
