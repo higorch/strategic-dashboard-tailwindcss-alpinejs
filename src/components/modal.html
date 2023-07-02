@@ -181,13 +181,17 @@
                 <div class="w-full mt-[30px]">
 
                     <a href="#" class="text-slate-900 dark:text-slate-400" x-data @click.prevent="$dispatch('open-modal', {ref: 'modal-form'})">
-                        open modal
+                        Modal form
+                    </a>
+
+                    <a href="#" class="text-slate-900 dark:text-slate-400" x-data @click.prevent="$dispatch('open-modal', {ref: 'modal-sidebar'})">
+                        Modal sidebar
                     </a>
                     
                     <!-- MODAL -->
                     <div class="fixed inset-0 z-50 overflow-y-auto bg-opacity-60 bg-black invisible" x-data="modal('modal-form')" x-bind="dialogue">
                         <div class="flex items-center justify-center min-h-screen p-[15px]" @click.self="open = false">
-                            <div class="relative w-full max-w-4xl rounded-lg shadow-sm shadow-gray-700 dark:shadow-neutral-950 bg-gray-50 dark:bg-gray-800" x-show="open" x-transition>
+                            <div class="relative w-full max-w-4xl rounded-lg shadow-sm shadow-gray-700 dark:shadow-neutral-950 bg-gray-50 dark:bg-zinc-900" x-show="open" x-transition>
                                 <span class="absolute top-[15px] right-[15px] text-[20px] cursor-pointer text-slate-500" @click="open = false">
                                     <i class="fa-solid fa-xmark"></i>
                                 </span>
@@ -207,6 +211,83 @@
                                         </div>
                             
                                         <div class="col-span-full md:col-span-3">
+                                            <label class="label-basic block">E-mail</label>
+                                            <input type="text" class="input-basic">
+                                        </div>
+                            
+                                        <div class="col-span-full md:col-span-3">
+                                            <label class="label-basic block">Work</label>
+                                            <select class="input-basic">
+                                                <option>---</option>
+                                                <option value="1">option 1</option>
+                                                <option value="2">option 2</option>
+                                            </select>
+                                        </div>
+                            
+                                        <div class="col-span-full md:col-span-3">
+                                            <label class="label-basic block">Phone</label>
+                                            <input type="text" class="input-basic">
+                                        </div>
+                
+                                        <div class="col-span-full md:col-span-6">
+                                            <span class="block font-medium text-base mb-[10px] text-slate-900 dark:text-slate-400">Region where you live?</span>
+                                            <div class="flex gap-[15px]">
+                                                <label class="label-basic flex items-center gap-[5px]">
+                                                    <input type="radio" name="region" value="North" class="input-check-basic">
+                                                    <span>North</span>
+                                                </label>
+                                                <label class="label-basic flex items-center gap-[5px]">
+                                                    <input type="radio" name="region" value="South" class="input-check-basic">
+                                                    <span>South</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                
+                                        <div class="col-span-full md:col-span-6">
+                                            <span class="block font-medium text-base mb-[10px] text-slate-900 dark:text-slate-400">Accept terms?</span>
+                                            <div class="flex gap-[15px]">
+                                                <label class="label-basic flex items-center gap-[5px]">
+                                                    <input type="checkbox" class="input-check-basic">
+                                                    <span>Accept.</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                    <!-- FORM -->
+
+                                </div>
+                                <div class="flex justify-end items-center w-full px-[30px] py-[15px] border-t-[1px] border-gray-200 dark:border-gray-700">
+                                    ...
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- MODAL -->
+
+                    <!-- MODAL -->
+                    <div class="fixed inset-0 z-50 overflow-y-auto bg-opacity-60 bg-black invisible" x-data="modal('modal-sidebar')" x-bind="dialogue">
+                        <div class="flex items-center justify-end min-h-screen" @click.self="open = false">
+                            <div class="relative w-full h-screen max-w-sm shadow-sm shadow-gray-700 dark:shadow-neutral-950 bg-gray-50 dark:bg-zinc-900">
+                                <span class="absolute top-[15px] right-[15px] text-[20px] cursor-pointer text-slate-500" @click="open = false">
+                                    <i class="fa-solid fa-xmark"></i>
+                                </span>
+                                <div class="flex items-center w-full px-[30px] py-[15px] border-b-[1px] border-gray-200 dark:border-gray-700">
+                                    <p class="font-medium text-[20px] text-slate-900 dark:text-slate-400">
+                                        Modal sidebar
+                                    </p>
+                                </div>
+                                <div class="flex flex-col px-[30px] py-[15px]">
+                                    
+                                    <!-- FORM -->
+                                    <div class="grid grid-cols-6 gap-x-[30px] gap-y-[15px]">
+                        
+                                        <div class="col-span-full md:col-span-6">
+                                            <label class="label-basic block">Name</label>
+                                            <input type="text" class="input-basic">
+                                        </div>
+                            
+                                        <div class="col-span-full md:col-span-6">
                                             <label class="label-basic block">E-mail</label>
                                             <input type="text" class="input-basic">
                                         </div>
