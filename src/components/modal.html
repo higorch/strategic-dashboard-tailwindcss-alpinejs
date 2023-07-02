@@ -15,7 +15,7 @@
 
         <div class="flex flex-col fixed z-50 inset-0 w-[300px] tablet:pl-[30px] tablet:py-[30px] left-[-300px] tablet:left-0 transition-[left]" :class="{'tablet:left-0': openSide, 'left-[-300px]': !openSide}">
 
-            <div class="tablet:hidden fixed inset-0 bg-black opacity-60 z-0" x-show="openSide" @click="openSide = false"></div>
+            <div class="tablet:hidden fixed inset-0 bg-opacity-60 bg-black z-0" x-show="openSide" @click="openSide = false"></div>
 
             <div class="flex flex-col w-full h-full py-[15px] z-10 tablet:rounded-lg shadow-sm shadow-gray-300 dark:shadow-gray-950 bg-theme-primary dark:bg-zinc-900">
 
@@ -179,13 +179,16 @@
                 </div>
 
                 <div class="w-full mt-[30px]">
+
+                    <a href="#" class="text-slate-900 dark:text-slate-400" x-data @click.prevent="$dispatch('open-modal', {ref: 'modal-form'})">
+                        open modal
+                    </a>
                     
                     <!-- MODAL -->
-                    <div class="fixed inset-0 z-50">
-                        <div class="fixed inset-0 opacity-60 cursor-pointer bg-black"></div>
-                        <div class="flex items-center justify-center min-h-screen px-[30px] py-[15px]">
-                            <div class="relative w-full max-w-4xl rounded-lg shadow-sm shadow-gray-700 dark:shadow-neutral-950 bg-gray-50 dark:bg-gray-800">
-                                <span class="absolute top-[15px] right-[15px] text-[20px] cursor-pointer text-slate-500">
+                    <div class="fixed inset-0 z-50 overflow-y-auto bg-opacity-60 bg-black invisible" x-data="modal('modal-form')" x-bind="dialogue">
+                        <div class="flex items-center justify-center min-h-screen p-[15px]" @click.self="open = false">
+                            <div class="relative w-full max-w-4xl rounded-lg shadow-sm shadow-gray-700 dark:shadow-neutral-950 bg-gray-50 dark:bg-gray-800" x-show="open" x-transition>
+                                <span class="absolute top-[15px] right-[15px] text-[20px] cursor-pointer text-slate-500" @click="open = false">
                                     <i class="fa-solid fa-xmark"></i>
                                 </span>
                                 <div class="flex items-center w-full px-[30px] py-[15px] border-b-[1px] border-gray-200 dark:border-gray-700">

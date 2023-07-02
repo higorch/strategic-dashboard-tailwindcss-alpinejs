@@ -15,7 +15,7 @@
 
         <div class="flex flex-col fixed z-50 inset-0 w-[300px] tablet:pl-[30px] tablet:py-[30px] left-[-300px] tablet:left-0 transition-[left]" :class="{'tablet:left-0': openSide, 'left-[-300px]': !openSide}">
 
-            <div class="tablet:hidden fixed inset-0 bg-black opacity-60 z-0" x-show="openSide" @click="openSide = false"></div>
+            <div class="tablet:hidden fixed inset-0 bg-opacity-60 bg-black z-0" x-show="openSide" @click="openSide = false"></div>
 
             <div class="flex flex-col w-full h-full py-[15px] z-10 tablet:rounded-lg shadow-sm shadow-gray-300 dark:shadow-gray-950 bg-theme-primary dark:bg-zinc-900">
 

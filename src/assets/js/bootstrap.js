@@ -14,3 +14,4 @@ import '../css/style.css'
 
 // COMPONENTS IMPORTS
 import '../js/diagram.js';
+import '../js/modal.js';
