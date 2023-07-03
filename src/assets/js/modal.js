@@ -5,12 +5,20 @@ document.addEventListener('alpine:init', () => {
         ref: ref,
         dialogue: {
             ['@open-modal.window']() {
-                this.$event.detail.ref == this.ref ? this.open = true : this.open = false;
+                if (this.$event.detail.ref == this.ref) this.open = true;
             },
             [':class']() {
                 return {
                     'visible': this.open,
                     'invisible': !this.open
+                };
+            }
+        },
+        transitionSidebar: {
+            [':class']() {
+                return {
+                    'right-0 opacity-100': this.open,
+                    'right-[-100%] opacity-0': !this.open
                 };
             }
         },

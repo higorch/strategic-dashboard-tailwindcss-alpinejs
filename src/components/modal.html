@@ -258,7 +258,9 @@
 
                                 </div>
                                 <div class="flex justify-end items-center w-full px-[30px] py-[15px] border-t-[1px] border-gray-200 dark:border-gray-700">
-                                    ...
+                                    <a href="#" class="text-slate-900 dark:text-slate-400" x-data @click.prevent="$dispatch('open-modal', {ref: 'modal-sidebar'})">
+                                        Modal sidebar
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -267,8 +269,8 @@
 
                     <!-- MODAL -->
                     <div class="fixed inset-0 z-50 overflow-y-auto bg-opacity-60 bg-black invisible" x-data="modal('modal-sidebar')" x-bind="dialogue">
-                        <div class="flex items-center justify-end min-h-screen" @click.self="open = false">
-                            <div class="relative w-full h-screen max-w-sm shadow-sm shadow-gray-700 dark:shadow-neutral-950 bg-gray-50 dark:bg-zinc-900">
+                        <div class="min-h-screen" @click.self="open = false">
+                            <div class="flex flex-col fixed right-[-100%] opacity-0 transition-all duration-200 w-full h-screen tablet:w-[385px] shadow-sm shadow-gray-700 dark:shadow-neutral-950 bg-gray-50 dark:bg-zinc-900" x-bind:="transitionSidebar">
                                 <span class="absolute top-[15px] right-[15px] text-[20px] cursor-pointer text-slate-500" @click="open = false">
                                     <i class="fa-solid fa-xmark"></i>
                                 </span>
@@ -277,7 +279,7 @@
                                         Modal sidebar
                                     </p>
                                 </div>
-                                <div class="flex flex-col px-[30px] py-[15px]">
+                                <div class="flex flex-col flex-grow px-[30px] py-[15px] overflow-y-auto" data-simplebar>
                                     
                                     <!-- FORM -->
                                     <div class="grid grid-cols-6 gap-x-[30px] gap-y-[15px]">
