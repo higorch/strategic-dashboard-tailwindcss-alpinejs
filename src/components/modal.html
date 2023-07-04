@@ -189,7 +189,7 @@
                     </a>
                     
                     <!-- MODAL -->
-                    <div class="fixed inset-0 z-50 overflow-y-auto bg-opacity-60 bg-black invisible" x-data="modal('modal-form')" x-bind="dialogue">
+                    <div class="fixed inset-0 z-50 overflow-y-auto bg-black/60 invisible" x-data="modal('modal-form')" x-bind="dialogue">
                         <div class="flex items-center justify-center min-h-screen p-[15px]" @click.self="open = false">
                             <div class="relative w-full max-w-4xl rounded-lg shadow-sm shadow-gray-700 dark:shadow-neutral-950 bg-gray-50 dark:bg-zinc-900" x-show="open" x-transition>
                                 <span class="absolute top-[15px] right-[15px] text-[20px] cursor-pointer text-slate-500" @click="open = false">
@@ -268,7 +268,7 @@
                     <!-- MODAL -->
 
                     <!-- MODAL -->
-                    <div class="fixed inset-0 z-50 overflow-y-auto bg-opacity-60 bg-black invisible" x-data="modal('modal-sidebar')" x-bind="dialogue">
+                    <div class="fixed inset-0 z-50 overflow-y-auto bg-black/60 invisible" x-data="modal('modal-sidebar')" x-bind="dialogue">
                         <div class="min-h-screen" @click.self="open = false">
                             <div class="flex flex-col fixed right-[-100%] opacity-0 transition-all duration-200 w-full h-screen tablet:w-[385px] shadow-sm shadow-gray-700 dark:shadow-neutral-950 bg-gray-50 dark:bg-zinc-900" x-bind:="transitionSidebar">
                                 <span class="absolute top-[15px] right-[15px] text-[20px] cursor-pointer text-slate-500" @click="open = false">

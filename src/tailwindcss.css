@@ -17,7 +17,7 @@
 
     /* input-basic */
     .input-basic {
-        @apply w-full h-[45px] py-[5px] px-[10px] appearance-none rounded-lg text-zinc-600 dark:text-zinc-400 border-[1px] shadow-sm border-zinc-200 dark:border-zinc-700 bg-zinc-50 dark:bg-zinc-900/50;
+        @apply w-full h-[45px] py-[5px] px-[10px] appearance-none rounded-lg text-zinc-600 dark:text-zinc-400 border-[1px] shadow-sm border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-800;
     }
     .input-basic:focus {
         @apply outline-none shadow-none border-gray-300 dark:border-gray-600;
@@ -30,7 +30,7 @@
 
     /* input-group */
     .input-group {
-        @apply flex items-center h-[45px] py-[5px] px-[10px] rounded-lg border-[1px] shadow-sm border-zinc-200 dark:border-zinc-700 bg-zinc-50 dark:bg-zinc-900/50;
+        @apply flex items-center h-[45px] py-[5px] px-[10px] rounded-lg border-[1px] shadow-sm border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-800;
     }
     .input-group:focus-within {
         @apply border-gray-300 dark:border-gray-600;
