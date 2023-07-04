@@ -178,13 +178,17 @@
 
                 <div class="w-full mt-[30px]">
 
-                    <a href="#" class="text-slate-900 dark:text-slate-400" x-data @click.prevent="$dispatch('open-modal', {ref: 'modal-form'})">
-                        Modal form
-                    </a>
+                    <div class="grid grid-cols-2 gap-4">
 
-                    <a href="#" class="text-slate-900 dark:text-slate-400" x-data @click.prevent="$dispatch('open-modal', {ref: 'modal-sidebar'})">
-                        Modal sidebar
-                    </a>
+                        <a href="#" class="inline-flex items-center justify-center px-4 py-2 text-white bg-gray-400 hover:bg-gray-500 rounded-md shadow-md transition-colors duration-300 ease-in-out" x-data @click.prevent="$dispatch('open-modal', {ref: 'modal-form'})">
+                            Modal form
+                        </a>
+                    
+                        <a href="#" class="inline-flex items-center justify-center px-4 py-2 text-white bg-gray-500 hover:bg-gray-600 rounded-md shadow-md transition-colors duration-300 ease-in-out" x-data @click.prevent="$dispatch('open-modal', {ref: 'modal-sidebar'})">
+                            Modal sidebar
+                        </a>
+
+                    </div>
                     
                     <!-- MODAL -->
                     <div class="fixed inset-0 z-50 overflow-y-auto bg-black/60 invisible" x-data="modal('modal-form')" x-bind="dialogue">
@@ -256,9 +260,11 @@
 
                                 </div>
                                 <div class="flex justify-end items-center w-full px-[30px] py-[15px] border-t-[1px] border-gray-200 dark:border-gray-700">
-                                    <a href="#" class="text-slate-900 dark:text-slate-400" x-data @click.prevent="$dispatch('open-modal', {ref: 'modal-sidebar'})">
+                                    
+                                    <a href="#" class="inline-flex items-center justify-center px-4 py-2 text-white bg-gray-500 hover:bg-gray-600 rounded-md shadow-md transition-colors duration-300 ease-in-out" x-data @click.prevent="$dispatch('open-modal', {ref: 'modal-sidebar'})">
                                         Modal sidebar
                                     </a>
+                                    
                                 </div>
                             </div>
                         </div>
