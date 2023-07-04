@@ -13,11 +13,9 @@
 
     <div class="flex flex-row bg-theme-primary dark:bg-zinc-900">
 
-        <div class="flex flex-col fixed z-50 inset-0 w-[300px] tablet:pl-[30px] tablet:py-[30px] left-[-300px] tablet:left-0 transition-[left]" :class="{'tablet:left-0': openSide, 'left-[-300px]': !openSide}">
+        <div class="flex flex-col fixed w-full tablet:w-[300px] inset-0 z-50 tablet:z-auto transition-all tablet:transition-none invisible tablet:visible bg-black/60 tablet:bg-transparent" @click.self="if(window.innerWidth <= 992) openSide = false" :class="{'visible': openSide, 'invisible': !openSide}">
 
-            <div class="tablet:hidden fixed inset-0 bg-opacity-60 bg-black z-0" x-show="openSide" @click="openSide = false"></div>
-
-            <div class="flex flex-col w-full h-full py-[15px] z-10 tablet:rounded-lg shadow-sm shadow-gray-300 dark:shadow-gray-950 bg-theme-primary dark:bg-zinc-900">
+            <div class="flex flex-col fixed inset-0 w-[300px] h-full py-[15px] z-10 transition-[left] ease-in-out duration-200 shadow-sm shadow-gray-300 dark:shadow-gray-950 bg-theme-primary dark:bg-zinc-900" :class="{'left-0': openSide, '-left-[300px]': !openSide}">
 
                 <div class="flex justify-start items-center w-full py-[15px] px-[30px]">
                     <img src="../assets/img/logoipsum.svg" class="w-10/12 h-auto">
@@ -85,7 +83,7 @@
                     </ul>
                 </nav>
 
-                <div class="flex flex-row mx-[30px] border-t-[1px] border-gray-200 dark:border-gray-700">
+                <div class="flex flex-row mx-[30px] border-t-[1px] border-zinc-200/50 dark:border-zinc-700/25">
                     <div class="flex flex-col justify-start items-center w-full p-[15px]">
                         <div class="block relative w-[60px] h-[60px] rounded-full overflow-hidden">
                             <img src="../assets/img/adam-wathan.jpg">
@@ -106,7 +104,7 @@
 
         </div>
 
-        <div class="flex flex-col w-full tablet:w-content min-h-screen ml-auto px-[30px] transition-[width]" :class="{'w-full tablet:w-content': openSide, 'w-full': !openSide}">
+        <div class="flex flex-col w-full tablet:w-content min-h-screen ml-auto px-[30px] transition-[width] ease-in-out duration-200" :class="{'w-full tablet:w-content': openSide, 'w-full': !openSide}">
 
             <div class="flex flex-col w-full sticky top-0 pt-[30px] mb-[15px] bg-theme-primary dark:bg-zinc-900">
 
@@ -124,7 +122,7 @@
 
                         <div class="flex gap-[15px]">
 
-                            <a href="#" class="flex justify-between items-center relative w-[65px] py-[6px] px-[10px] cursor-pointer rounded-full border-[1px] border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800" @click.prevent="darkMode = !darkMode">
+                            <a href="#" class="flex justify-between items-center relative w-[65px] py-[6px] px-[10px] cursor-pointer rounded-full border-[1px] border-zinc-200/50 dark:border-zinc-700/50 bg-zinc-50 dark:bg-zinc-800" @click.prevent="darkMode = !darkMode">
                                 <i class="fa-regular fa-moon text-slate-500 text-[15px]"></i>
                                 <i class="fa-regular fa-sun text-slate-500 text-[15px]"></i>
                                 <span class="absolute w-[20px] h-[20px] rounded-full bg-slate-500" :class="{'left-[6px]': darkMode, 'right-[6px]': !darkMode}"></span>
@@ -139,11 +137,11 @@
                                 <a href="#" class="text-[20px] text-slate-500" @click.prevent="open = !open">
                                     <i class="fa-solid fa-envelope"></i>
                                 </a>
-                                <div class="flex-col gap-[10px] w-[260px] absolute top-[35px] right-0 p-[15px] z-50 rounded-lg shadow-sm shadow-gray-300 dark:shadow-neutral-950 bg-gray-50 dark:bg-gray-800 hidden" :class="{'flex': open, 'hidden': !open}">
+                                <div class="flex-col gap-[10px] w-[260px] absolute top-[35px] right-0 p-[15px] z-50 rounded-lg shadow-sm shadow-zinc-300 dark:shadow-zinc-950 bg-gray-50 dark:bg-zinc-900 hidden" :class="{'flex': open, 'hidden': !open}">
                                     <div class="flex flex-col">
                                         <span class="font-bold text-base text-slate-500 dark:text-slate-400">Messages</span>
                                     </div>
-                                    <hr class="border-gray-200 dark:border-gray-700">
+                                    <hr class="border-zinc-100 dark:border-zinc-800">
                                     <div>...</div>
                                 </div>
                             </div>
@@ -153,11 +151,11 @@
                                 <a href="#" class="text-[20px] text-slate-500" @click.prevent="open = !open">
                                     <i class="fa-solid fa-bell"></i>
                                 </a>
-                                <div class="flex-col gap-[10px] w-[260px] absolute top-[35px] right-0 p-[15px] z-50 rounded-lg shadow-sm shadow-gray-300 dark:shadow-neutral-950 bg-gray-50 dark:bg-gray-800 hidden" :class="{'flex': open, 'hidden': !open}">
+                                <div class="flex-col gap-[10px] w-[260px] absolute top-[35px] right-0 p-[15px] z-50 rounded-lg shadow-sm shadow-zinc-300 dark:shadow-zinc-950 bg-gray-50 dark:bg-zinc-900 hidden" :class="{'flex': open, 'hidden': !open}">
                                     <div class="flex flex-col">
                                         <span class="font-bold text-base text-slate-500 dark:text-slate-400">Notifications</span>
                                     </div>
-                                    <hr class="border-gray-200 dark:border-gray-700">
+                                    <hr class="border-zinc-100 dark:border-zinc-800">
                                     <div>...</div>
                                 </div>
                             </div>
@@ -239,7 +237,7 @@
             
             </div>
 
-            <div class="flex items-center w-full py-[30px] relative box-border border-t-[1px] border-gray-200 dark:border-gray-700">
+            <div class="flex items-center w-full py-[30px] relative box-border border-t-[1px] border-zinc-200/50 dark:border-zinc-700/25">
                 <span class="text-[14px] text-slate-500">&copy; 2023 - Strategic Dashboard</span>
             </div>
 
