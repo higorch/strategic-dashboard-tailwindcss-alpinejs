@@ -13,9 +13,9 @@
 
     <div class="flex flex-row bg-theme-primary dark:bg-zinc-950/95">
 
-        <div class="flex flex-col fixed w-full tablet:w-[300px] inset-0 z-50 tablet:z-auto transition-all invisible tablet:visible bg-black/60 tablet:bg-transparent" @click.self="if(window.innerWidth <= 992) openSide = false" :class="{'tablet:w-[300px] visible': openSide, 'w-0 invisible': !openSide}">
+        <div class="flex flex-col fixed w-full tablet:w-[280px] inset-0 z-50 tablet:z-auto transition-all invisible tablet:visible bg-black/60 tablet:bg-transparent" @click.self="if(window.innerWidth <= 992) openSide = false" :class="{'tablet:w-[280px] visible': openSide, 'w-0 invisible': !openSide}">
 
-            <div class="flex flex-col fixed inset-0 w-[300px] h-full py-[15px] z-10 transition-[left] ease-in-out duration-200 shadow-mode-light dark:shadow-mode-dark bg-white dark:bg-zinc-900" :class="{'left-0': openSide, '-left-[300px]': !openSide}">
+            <div class="flex flex-col fixed inset-0 w-[280px] h-full py-[15px] z-10 transition-[left] ease-in-out duration-200 shadow-mode-light dark:shadow-mode-dark bg-white dark:bg-zinc-900" :class="{'left-0': openSide, '-left-[280px]': !openSide}">
 
                 <div class="flex justify-start items-center w-full p-[15px]">
                     <img src="../assets/img/logoipsum.svg" class="w-10/12 h-auto">
@@ -24,7 +24,7 @@
                 <nav class="flex flex-grow p-[15px] mb-auto overflow-y-auto" data-simplebar>
                     <ul class="flex flex-col w-full">
                         <li>
-                            <a href="#" class="flex justify-between items-center py-[10px] relative text-[17px] font-semibold text-slate-500">
+                            <a href="#" class="flex justify-between items-center py-[10px] relative text-[16px] font-semibold text-slate-500">
                                 <span class="flex justify-between items-center gap-[15px]">
                                     <i class="fa-solid fa-gauge-high"></i>
                                     Dashboard
@@ -32,7 +32,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="flex justify-between items-center py-[10px] relative text-[17px] font-bold text-slate-900 dark:text-slate-400">
+                            <a href="#" class="flex justify-between items-center py-[10px] relative text-[16px] font-semibold text-slate-900 dark:text-slate-400">
                                 <span class="flex justify-between items-center gap-[15px]">
                                     <i class="fa-solid fa-list-check"></i>
                                     Projects
@@ -40,7 +40,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="flex justify-between items-center py-[10px] relative text-[17px] font-semibold text-slate-500">
+                            <a href="#" class="flex justify-between items-center py-[10px] relative text-[16px] font-semibold text-slate-500">
                                 <span class="flex justify-between items-center gap-[15px]">
                                     <i class="fa-solid fa-rectangle-list"></i>
                                     Kanban
@@ -48,7 +48,7 @@
                             </a>
                         </li>
                         <li x-data="{open: false}">
-                            <a href="#" class="flex justify-between items-center py-[10px] relative text-[17px] font-semibold text-slate-500" @click.prevent="open = !open">
+                            <a href="#" class="flex justify-between items-center py-[10px] relative text-[16px] font-semibold text-slate-500" @click.prevent="open = !open">
                                 <span class="flex justify-between items-center gap-[15px]">
                                     <i class="fa-brands fa-uikit"></i>
                                     Components
@@ -67,7 +67,7 @@
                             </ul>
                         </li>
                         <li x-data="{open: false}">
-                            <a href="#" class="flex justify-between items-center py-[10px] relative text-[17px] font-semibold text-slate-500" @click.prevent="open = !open">
+                            <a href="#" class="flex justify-between items-center py-[10px] relative text-[16px] font-semibold text-slate-500" @click.prevent="open = !open">
                                 <span class="flex justify-between items-center gap-[15px]">
                                     <i class="fa-solid fa-pager"></i>
                                     Pages
@@ -83,12 +83,12 @@
                     </ul>
                 </nav>
 
-                <div class="flex flex-row mx-[15px] border-t-[1px] border-zinc-200/50 dark:border-zinc-700/25">
+                <div class="flex flex-row mx-[15px] border-t-[1px] border-zinc-200/50 dark:border-zinc-700/25 hover:bg-neutral-50 dark:hover:bg-neutral-900">
                     <div class="flex flex-col justify-start items-center w-full p-[15px]">
                         <div class="block relative w-[60px] h-[60px] rounded-full overflow-hidden">
                             <img src="../assets/img/adam-wathan.jpg">
                         </div>
-                        <p class="text-[17px] font-semibold text-slate-500 mt-[5px] mb-[15px]">Adam Wathan</p>
+                        <p class="text-[16px] font-semibold text-slate-500 mt-[5px] mb-[15px]">Adam Wathan</p>
                         <div class="flex flex-row gap-[30px]">
                             <a href="#" title="Settings" class="flex justify-center items-center text-[20px] text-slate-500">
                                 <i class="fa-solid fa-gear"></i>

@@ -5,7 +5,7 @@ module.exports = {
   theme: {
     extend: {
       width: {
-        "content": "calc(100% - 300px)"
+        "content": "calc(100% - 280px)"
       },
       colors: {
         "theme": {
