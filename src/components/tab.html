@@ -179,32 +179,46 @@
                 <!-- CARD -->
                 <div class="flex flex-col w-full mt-[30px] rounded-lg shadow-mode-light dark:shadow-mode-dark bg-white dark:bg-zinc-900">
 
+                    <div class="flex w-full px-[15px] py-[15px] border-b-[1px] border-zinc-200/50 dark:border-zinc-700/25">
+                        <h4 class="font-medium text-[20px] text-slate-900 dark:text-slate-400">Horizontal</h4>
+                    </div>
+
                     <div class="w-full p-[15px]">
-                        
-                        <div class="block" x-data="{tab: 'tab-1', openTab(tab) {return this.tab == tab}}">
+                       
+                        <!-- TAB -->
+                        <div x-data="{ tab: 'tab-1' }" class="rounded-lg shadow-sm border-[1px] border-zinc-200/50 dark:border-zinc-700/25">
                             <div class="flex">
-                                <a href="#" @click.prevent="tab = 'tab-1'" class="py-2 px-4 text-gray-500 bg-transparent outline-none border-b-2 border-transparent hover:text-gray-700 hover:border-gray-500 transition-all">
+                                <button @click="tab = 'tab-1'"
+                                    :class="{'bg-zinc-200 text-zinc-600': tab === 'tab-1', 'text-gray-600 dark:text-gray-400 hover:bg-zinc-200': tab !== 'tab-1'}"
+                                    class="flex-1 py-3 px-4 text-sm font-medium focus:outline-none transition-colors duration-300 rounded-tl-lg">
                                     Tab 1
-                                </a>
-                                <a href="#" @click.prevent="tab = 'tab-2'" class="py-2 px-4 text-gray-500 bg-transparent outline-none border-b-2 border-transparent hover:text-gray-700 hover:border-gray-500 transition-all">
+                                </button>
+                                <button @click="tab = 'tab-2'"
+                                    :class="{'bg-zinc-200 text-zinc-600': tab === 'tab-2', 'text-gray-600 dark:text-gray-400 hover:bg-zinc-200': tab !== 'tab-2'}"
+                                    class="flex-1 py-3 px-4 text-sm font-medium focus:outline-none transition-colors duration-300 rounded-tr-lg">
                                     Tab 2
-                                </a>
-                                <a href="#" @click.prevent="tab = 'tab-3'" class="py-2 px-4 text-gray-500 bg-transparent outline-none border-b-2 border-transparent hover:text-gray-700 hover:border-gray-500 transition-all">
-                                    Tab 3
-                                </a>
+                                </button>
                             </div>
-                            <div class="block">
-                                <div class="hidden" :class="{'block': openTab('tab-1'), 'hidden': !openTab('tab-1')}">
-                                    <p>Conteúdo da guia 1</p>
+                            <div class="p-4">
+                                <div x-show="tab === 'tab-1'">
+                                    <p class="text-gray-600 dark:text-gray-400">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem rem tenetur architecto corporis dolorem nam
+                                        molestias quo, officia nihil hic! Autem ipsam itaque consequuntur architecto officia, obcaecati optio quaerat
+                                        impedit.
+                                    </p>
                                 </div>
-                                <div class="hidden" :class="{'block': openTab('tab-2'), 'hidden': !openTab('tab-2')}">
-                                    <p>Conteúdo da guia 2</p>
-                                </div>
-                                <div class="hidden" :class="{'block': openTab('tab-3'), 'hidden': !openTab('tab-3')}">
-                                    <p>Conteúdo da guia 3</p>
+                                <div x-show="tab === 'tab-2'">
+                                    <p class="text-gray-600 dark:text-gray-400">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem rem tenetur architecto corporis dolorem nam
+                                        molestias quo, officia nihil hic! Autem ipsam itaque consequuntur architecto officia, obcaecati optio quaerat
+                                        impedit. Nam vitae incidunt labore molestiae mollitia accusantium numquam quis laboriosam corporis placeat earum
+                                        natus pariatur hic nobis sed culpa itaque distinctio doloribus in inventore, tenetur nesciunt ullam cupiditate?
+                                        Expedita, facere?
+                                    </p>
                                 </div>
                             </div>
-                        </div>                          
+                        </div>
+                        <!-- TAB -->
                         
                     </div>
 
