@@ -1215,6 +1215,10 @@ video {
   min-height: 100vh;
 }
 
+.w-0 {
+  width: 0px;
+}
+
 .w-1\/2 {
   width: 50%;
 }
@@ -1988,10 +1992,6 @@ video {
 
   .tablet\:bg-transparent {
     background-color: transparent;
-  }
-
-  .tablet\:transition-none {
-    transition-property: none;
   }
 }
 /*!***************************************************************************************************!*\
