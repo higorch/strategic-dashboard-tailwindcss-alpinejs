@@ -180,7 +180,43 @@
                 <div class="flex flex-col w-full mt-[30px] rounded-lg shadow-mode-light dark:shadow-mode-dark bg-white dark:bg-zinc-900">
 
                     <div class="w-full p-[15px]">
-                        <p class="text-gray-600 dark:text-gray-400">...</p>
+                        
+                        <!-- ACCORDION -->
+                        <div x-data="{open: null}" class="flex flex-col gap-[15px]">
+                            
+                            <div class="rounded-md border-[1px] border-zinc-100 dark:border-zinc-800">
+                                <button
+                                    @click="open !== 1 ? open = 1 : open = null"
+                                    :class="{'bg-zinc-100 dark:bg-zinc-800 focus:outline-none': open === 1, 'bg-zinc-50 dark:bg-zinc-800/30 focus:outline-none': open !== 1}"
+                                    class="w-full py-2 px-4 text-left text-gray-700 dark:text-gray-400 font-medium"
+                                >
+                                    Tab 1
+                                </button>
+                                <div x-show="open === 1" class="p-4">
+                                    <p class="text-gray-400 dark:text-gray-600">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem rem tenetur architecto corporis dolorem nam molestias quo, officia nihil hic! Autem ipsam itaque consequuntur architecto officia, obcaecati optio quaerat impedit.
+                                    </p>
+                                </div>
+                            </div>
+                          
+                            <div class="rounded-md border-[1px] border-zinc-100 dark:border-zinc-800">
+                                <button
+                                    @click="open !== 2 ? open = 2 : open = null"
+                                    :class="{'bg-zinc-100 dark:bg-zinc-800 focus:outline-none': open === 2, 'bg-zinc-50 dark:bg-zinc-800/30 focus:outline-none': open !== 2}"
+                                    class="w-full py-2 px-4 text-left text-gray-700 dark:text-gray-400 font-medium"
+                                >
+                                    Tab 2
+                                </button>
+                                <div x-show="open === 2" class="p-4">
+                                    <p class="text-gray-400 dark:text-gray-600">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem rem tenetur architecto corporis dolorem nam molestias quo, officia nihil hic! Autem ipsam itaque consequuntur architecto officia, obcaecati optio quaerat impedit. Nam vitae incidunt labore molestiae mollitia accusantium numquam quis laboriosam corporis placeat earum natus pariatur hic nobis sed culpa itaque distinctio doloribus in inventore, tenetur nesciunt ullam cupiditate? Expedita, facere?
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- ACCORDION -->
+
                     </div>
 
                 </div>

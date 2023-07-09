@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="../assets/bundle/app.css">
+</head>
+
+<body>
+
+    <div class="flex h-screen">
+        <div class="flex justify-center items-center w-1/2 bg-cover bg-center grayscale bg-form-login">
+            <img src="../assets/img/logoipsum.svg" alt="Logoipsum" class="w-[250px]">
+        </div>
+        <div class="w-1/2 p-8 flex justify-center items-center bg-theme-primary">
+            <form class="max-w-md w-full bg-white rounded-lg shadow-mode-light p-8">
+                <h1 class="text-2xl font-bold mb-6">Register</h1>
+                <div class="flex flex-col gap-[15px]">
+                    <div>
+                        <label class="label-basic block">E-mail</label>
+                        <input type="email" class="input-basic">
+                    </div>
+                    <div>
+                        <label class="label-basic block">Password</label>
+                        <input type="password" class="input-basic">
+                    </div>
+                    <div>
+                        <label class="label-basic block">Confirm Password</label>
+                        <input type="password" class="input-basic">
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <a href="./login.html" class="text-sm text-slate-500 hover:underline">Already have an account?</a>
+                        <button type="submit" class="w-1/2 px-4 py-2 text-white rounded-md hover:bg-zinc-900 bg-zinc-700">Register</button>
+                    </div>
+                </div>                
+            </form>
+        </div>
+    </div>
+    
+</body>
+
+</html>
