@@ -186,20 +186,20 @@
                     <div class="w-full p-[15px]">
                         
                         <!-- TAB -->
-                        <div x-data="{ tab: 'tab-1' }" class="rounded-lg border-[1px] border-zinc-100 dark:border-zinc-800">
+                        <div x-data="{ tab: 'tab-1' }">
                             <div class="flex">
                                 <button @click="tab = 'tab-1'"
                                     :class="{'font-semibold text-slate-600 dark:text-slate-400 bg-zinc-100 dark:bg-zinc-800 focus:outline-none': tab === 'tab-1', 'font-normal text-gray-500 dark:text-gray-400 bg-zinc-50 dark:bg-zinc-800/30 rounded-none focus:outline-none': tab !== 'tab-1'}"
-                                    class="flex-1 py-3 px-4 text-sm font-medium rounded-tl-lg">
+                                    class="flex-1 py-3 px-4 text-sm font-medium rounded-tl-md">
                                     Tab 1
                                 </button>
                                 <button @click="tab = 'tab-2'"
                                     :class="{'font-semibold text-slate-600 dark:text-slate-400 bg-zinc-100 dark:bg-zinc-800 focus:outline-none': tab === 'tab-2', 'font-normal text-gray-500 dark:text-gray-400 bg-zinc-50 dark:bg-zinc-800/30 rounded-none focus:outline-none': tab !== 'tab-2'}"
-                                    class="flex-1 py-3 px-4 text-sm font-medium rounded-tr-lg">
+                                    class="flex-1 py-3 px-4 text-sm font-medium rounded-tr-md">
                                     Tab 2
                                 </button>
                             </div>
-                            <div class="border-t border-zinc-100 dark:border-zinc-800 p-4">
+                            <div class="p-4 rounded-b-md border-[1px] border-zinc-100 dark:border-zinc-800">
                                 <div x-show="tab === 'tab-1'">
                                     <p class="text-gray-400 dark:text-gray-600">
                                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem rem tenetur architecto corporis dolorem nam
@@ -239,16 +239,16 @@
                             <div class="flex flex-col">
                                 <button @click="tab = 'tab-1'"
                                     :class="{'font-semibold text-slate-600 dark:text-slate-400 bg-zinc-100 dark:bg-zinc-800 focus:outline-none': tab === 'tab-1', 'font-normal text-gray-500 dark:text-gray-400 bg-zinc-50 dark:bg-zinc-800/30 rounded-none focus:outline-none': tab !== 'tab-1'}"
-                                    class="py-3 px-4 text-sm font-medium rounded-tl-lg">
+                                    class="py-3 px-4 text-sm font-medium rounded-tl-md">
                                     Tab 1
                                 </button>
                                 <button @click="tab = 'tab-2'"
                                     :class="{'font-semibold text-slate-600 dark:text-slate-400 bg-zinc-100 dark:bg-zinc-800 focus:outline-none': tab === 'tab-2', 'font-normal text-gray-500 dark:text-gray-400 bg-zinc-50 dark:bg-zinc-800/30 rounded-none focus:outline-none': tab !== 'tab-2'}"
-                                    class="py-3 px-4 text-sm font-medium rounded-bl-lg">
+                                    class="py-3 px-4 text-sm font-medium rounded-bl-md">
                                     Tab 2
                                 </button>
                             </div>
-                            <div class="p-4 flex-1 rounded-r-lg border border-zinc-100 dark:border-zinc-800">
+                            <div class="p-4 flex-1 rounded-r-md border border-zinc-100 dark:border-zinc-800">
                                 <div x-show="tab === 'tab-1'">
                                     <p class="text-gray-400 dark:text-gray-600">
                                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem rem tenetur architecto corporis dolorem nam
