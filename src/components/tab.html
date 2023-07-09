@@ -179,36 +179,36 @@
                 <!-- CARD -->
                 <div class="flex flex-col w-full mt-[30px] rounded-lg shadow-mode-light dark:shadow-mode-dark bg-white dark:bg-zinc-900">
 
-                    <div class="flex w-full px-[15px] py-[15px] border-b-[1px] border-zinc-200/50 dark:border-zinc-700/25">
+                    <div class="flex w-full px-[15px] py-[15px] border-b-[1px] border-zinc-100 dark:border-zinc-800">
                         <h4 class="font-medium text-[20px] text-slate-900 dark:text-slate-400">Horizontal</h4>
                     </div>
 
                     <div class="w-full p-[15px]">
-                       
+                        
                         <!-- TAB -->
-                        <div x-data="{ tab: 'tab-1' }" class="rounded-lg shadow-sm border-[1px] border-zinc-200/50 dark:border-zinc-700/25">
+                        <div x-data="{ tab: 'tab-1' }" class="rounded-lg border-[1px] border-zinc-100 dark:border-zinc-800">
                             <div class="flex">
                                 <button @click="tab = 'tab-1'"
-                                    :class="{'bg-zinc-200 text-zinc-600': tab === 'tab-1', 'text-gray-600 dark:text-gray-400 hover:bg-zinc-200': tab !== 'tab-1'}"
-                                    class="flex-1 py-3 px-4 text-sm font-medium focus:outline-none transition-colors duration-300 rounded-tl-lg">
+                                    :class="{'font-semibold text-slate-600 dark:text-slate-400 bg-zinc-100 dark:bg-zinc-800 focus:outline-none': tab === 'tab-1', 'font-normal text-gray-500 dark:text-gray-400 bg-zinc-50 dark:bg-zinc-800/30 rounded-none focus:outline-none': tab !== 'tab-1'}"
+                                    class="flex-1 py-3 px-4 text-sm font-medium rounded-tl-lg">
                                     Tab 1
                                 </button>
                                 <button @click="tab = 'tab-2'"
-                                    :class="{'bg-zinc-200 text-zinc-600': tab === 'tab-2', 'text-gray-600 dark:text-gray-400 hover:bg-zinc-200': tab !== 'tab-2'}"
-                                    class="flex-1 py-3 px-4 text-sm font-medium focus:outline-none transition-colors duration-300 rounded-tr-lg">
+                                    :class="{'font-semibold text-slate-600 dark:text-slate-400 bg-zinc-100 dark:bg-zinc-800 focus:outline-none': tab === 'tab-2', 'font-normal text-gray-500 dark:text-gray-400 bg-zinc-50 dark:bg-zinc-800/30 rounded-none focus:outline-none': tab !== 'tab-2'}"
+                                    class="flex-1 py-3 px-4 text-sm font-medium rounded-tr-lg">
                                     Tab 2
                                 </button>
                             </div>
-                            <div class="p-4">
+                            <div class="border-t border-zinc-100 dark:border-zinc-800 p-4">
                                 <div x-show="tab === 'tab-1'">
-                                    <p class="text-gray-600 dark:text-gray-400">
+                                    <p class="text-gray-400 dark:text-gray-600">
                                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem rem tenetur architecto corporis dolorem nam
                                         molestias quo, officia nihil hic! Autem ipsam itaque consequuntur architecto officia, obcaecati optio quaerat
                                         impedit.
                                     </p>
                                 </div>
                                 <div x-show="tab === 'tab-2'">
-                                    <p class="text-gray-600 dark:text-gray-400">
+                                    <p class="text-gray-400 dark:text-gray-600">
                                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem rem tenetur architecto corporis dolorem nam
                                         molestias quo, officia nihil hic! Autem ipsam itaque consequuntur architecto officia, obcaecati optio quaerat
                                         impedit. Nam vitae incidunt labore molestiae mollitia accusantium numquam quis laboriosam corporis placeat earum
@@ -219,7 +219,56 @@
                             </div>
                         </div>
                         <!-- TAB -->
-                        
+
+                    </div>
+
+                </div>
+                <!-- CARD -->
+
+                <!-- CARD -->
+                <div class="flex flex-col w-full mt-[30px] rounded-lg shadow-mode-light dark:shadow-mode-dark bg-white dark:bg-zinc-900">
+
+                    <div class="flex w-full px-[15px] py-[15px] border-b-[1px] border-zinc-100 dark:border-zinc-800">
+                        <h4 class="font-medium text-[20px] text-slate-900 dark:text-slate-400">Vertical</h4>
+                    </div>
+
+                    <div class="w-full p-[15px]">
+
+                        <!-- TAB -->
+                        <div x-data="{ tab: 'tab-1' }" class="flex mt-[30px]">
+                            <div class="flex flex-col">
+                                <button @click="tab = 'tab-1'"
+                                    :class="{'font-semibold text-slate-600 dark:text-slate-400 bg-zinc-100 dark:bg-zinc-800 focus:outline-none': tab === 'tab-1', 'font-normal text-gray-500 dark:text-gray-400 bg-zinc-50 dark:bg-zinc-800/30 rounded-none focus:outline-none': tab !== 'tab-1'}"
+                                    class="py-3 px-4 text-sm font-medium rounded-tl-lg">
+                                    Tab 1
+                                </button>
+                                <button @click="tab = 'tab-2'"
+                                    :class="{'font-semibold text-slate-600 dark:text-slate-400 bg-zinc-100 dark:bg-zinc-800 focus:outline-none': tab === 'tab-2', 'font-normal text-gray-500 dark:text-gray-400 bg-zinc-50 dark:bg-zinc-800/30 rounded-none focus:outline-none': tab !== 'tab-2'}"
+                                    class="py-3 px-4 text-sm font-medium rounded-bl-lg">
+                                    Tab 2
+                                </button>
+                            </div>
+                            <div class="p-4 flex-1 rounded-r-lg border border-zinc-100 dark:border-zinc-800">
+                                <div x-show="tab === 'tab-1'">
+                                    <p class="text-gray-400 dark:text-gray-600">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem rem tenetur architecto corporis dolorem nam
+                                        molestias quo, officia nihil hic! Autem ipsam itaque consequuntur architecto officia, obcaecati optio quaerat
+                                        impedit.
+                                    </p>
+                                </div>
+                                <div x-show="tab === 'tab-2'">
+                                    <p class="text-gray-400 dark:text-gray-600">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem rem tenetur architecto corporis dolorem nam
+                                        molestias quo, officia nihil hic! Autem ipsam itaque consequuntur architecto officia, obcaecati optio quaerat
+                                        impedit. Nam vitae incidunt labore molestiae mollitia accusantium numquam quis laboriosam corporis placeat earum
+                                        natus pariatur hic nobis sed culpa itaque distinctio doloribus in inventore, tenetur nesciunt ullam cupiditate?
+                                        Expedita, facere?
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- TAB -->
+
                     </div>
 
                 </div>
