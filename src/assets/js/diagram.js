@@ -1,4 +1,4 @@
-import { Node, Canvas } from 'butterfly-dag/pack/index.js';
+import {Canvas, Group, Node, Edge} from 'butterfly-dag/pack/index.js';
 import 'butterfly-dag/pack/index.css';
 
 function setComponent(component) {

@@ -132,31 +132,31 @@
                         
                         <div class="flex gap-[15px]">
 
-                            <div x-data="{open: false}" class="relative" @click.outside="open = false">
+                            <div x-data="dropdown('bottom-end')" class="relative" @click.outside="open = false">
                                 <span class="absolute right-[-5px] top-[5px] w-[8px] h-[8px] rounded-full bg-red-500"></span>
-                                <a href="#" class="text-[20px] text-slate-500" @click.prevent="open = !open">
+                                <a x-ref="referenceDropdown" href="#" class="text-[20px] text-slate-500" @click.prevent="open = !open">
                                     <i class="fa-solid fa-envelope"></i>
                                 </a>
-                                <div class="flex-col gap-[10px] w-[260px] absolute top-[35px] right-0 p-[15px] z-50 rounded-lg shadow-mode-light dark:shadow-mode-dark bg-white dark:bg-zinc-900 hidden" :class="{'flex': open, 'hidden': !open}">
+                                <div x-ref="floatingDropdown" class="flex-col gap-[10px] w-[260px] p-[15px] absolute rounded-lg shadow-mode-light dark:shadow-mode-dark bg-white dark:bg-zinc-900 hidden" :class="{'flex': open, 'hidden': !open}">
                                     <div class="flex flex-col">
                                         <span class="font-bold text-base text-slate-500 dark:text-slate-400">Messages</span>
                                     </div>
                                     <hr class="border-zinc-100 dark:border-zinc-800">
-                                    <div>..</div>
+                                    <div class="text-gray-400 dark:text-gray-600">...</div>
                                 </div>
                             </div>
 
-                            <div x-data="{open: false}" class="relative" @click.outside="open = false">
+                            <div x-data="dropdown('bottom-start')" class="relative" @click.outside="open = false">
                                 <span class="absolute right-[-2px] top-[5px] w-[8px] h-[8px] rounded-full bg-red-500"></span>
-                                <a href="#" class="text-[20px] text-slate-500" @click.prevent="open = !open">
+                                <a x-ref="referenceDropdown" href="#" class="text-[20px] text-slate-500" @click.prevent="open = !open">
                                     <i class="fa-solid fa-bell"></i>
                                 </a>
-                                <div class="flex-col gap-[10px] w-[260px] absolute top-[35px] right-0 p-[15px] z-50 rounded-lg shadow-mode-light dark:shadow-mode-dark bg-white dark:bg-zinc-900 hidden" :class="{'flex': open, 'hidden': !open}">
+                                <div x-ref="floatingDropdown" class="flex-col gap-[10px] w-[260px] p-[15px] absolute rounded-lg shadow-mode-light dark:shadow-mode-dark bg-white dark:bg-zinc-900 hidden" :class="{'flex': open, 'hidden': !open}">
                                     <div class="flex flex-col">
                                         <span class="font-bold text-base text-slate-500 dark:text-slate-400">Notifications</span>
                                     </div>
                                     <hr class="border-zinc-100 dark:border-zinc-800">
-                                    <div>..</div>
+                                    <div class="text-gray-400 dark:text-gray-600">...</div>
                                 </div>
                             </div>
 

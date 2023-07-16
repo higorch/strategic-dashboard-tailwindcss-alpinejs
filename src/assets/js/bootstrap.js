@@ -1,8 +1,11 @@
 // REQUIRED IMPORTS
+import { computePosition, autoUpdate, flip } from "@floating-ui/dom";
+window.computePosition = computePosition;
+window.flip = flip;
+window.autoUpdate = autoUpdate;
+
 import Alpine from 'alpinejs';
-
 window.Alpine = Alpine;
-
 Alpine.start();
 
 import 'simplebar';
@@ -12,6 +15,8 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 
 import '../css/style.css'
 
-// COMPONENTS IMPORTS
-import '../js/diagram.js';
-import '../js/modal.js';
+import '../js/modal';
+import '../js/dropdown';
+
+// OPTIONAL IMPORTS
+import '../js/diagram';
